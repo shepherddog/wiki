@@ -1,2 +1,2 @@
 # FinanceWiki
-Wiki for Finance area
+Finance Wiki 是一个金融知识整合站点，提供有趣又实用的金融领域知识以及其他有帮助的内容，可以快速查询和上手金融业务。

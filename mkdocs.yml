@@ -2,55 +2,93 @@
 site_name: Finance Wiki 
 site_description: Finance Wiki 是一个金融知识整合站点，提供有趣又实用的金融领域知识以及其他有帮助的内容，帮助广大金融从业者可以快速查询和上手金融业务。
 site_author: Zhimin Bai
+site_url: https://shepherddog.github.io/FinanceWiki/
 
 # Repository
-repo_name: 'shepherddog/Finance Wiki'
-repo_url: 'https://github.com/shepherddog/Finance Wiki'
+repo_name: shepherddog/Finance Wiki
+repo_url: https://github.com/shepherddog/FinanceWiki/
+
+# Copyright
+copyright: Copyright &copy; 2016 - 2022 Zhimin Bai
 
 # Contents
 nav:
   - 简介:
     - Getting Started: index.md
-    - 关于本项目: intro/about.md
-    - F.A.Q.: intro/faq.md
-  - 金融术语:
-    - 金融术语简介: terminology/index.md
+    - 关于本项目: 简介/about.md
+    - F.A.Q.: 简介/faq.md
+  - 金融机构:
+    - 金融机构概览: 金融机构/金融机构概览.md
+    - 金融市场: 金融机构/金融市场.md
+    - 银行体系: 金融机构/银行体系.md
+    - 监管机构: 金融机构/监管机构.md
+  - 贷款产品:
+    - 贷款产品分类: 贷款产品/贷款产品分类.md
+    - 常见信贷名词: 贷款产品/常见信贷名词.md
+    - 个人消费贷款: 贷款产品/个人消费贷款.md
+    - 个人经营贷款: 贷款产品/个人经营贷款.md
+    - 企业贷款: 贷款产品/企业贷款.md
+    - 互联网金融: 贷款产品/互联网金融.md
+    - 供应链金融: 贷款产品/供应链金融.md
+  - 支付领域:
+    - 支付领域简介: 支付领域/支付领域简介.md
+  - 系统设计:
+    - 信贷系统架构设计: 系统设计/信贷系统架构设计.md
+    - 信贷业务流程设计: 系统设计/信贷业务流程设计.md
+    - 会计分录和对账: 系统设计/会计分录和对账.md
+    - 额度系统设计: 系统设计/额度系统设计.md
 
+
+# Config theme
 theme:
-    name:
-        material
-    language: 'zh'
-    feature:
-        # - announce.dismiss
-        # - content.code.annotate
-        # - content.tabs.link
-        # - content.tooltips
-        # - header.autohide
-        # - navigation.expand
-        # - navigation.indexes
-        # - navigation.instant
-        # - navigation.prune
-        # - navigation.sections
-        - navigation.tabs
-        # - navigation.tabs.sticky
-        #- navigation.top
-        #- navigation.tracking
-        - search.highlight
-        - search.share
-        - search.suggest
-        - toc.follow
-        # - toc.integrate
-    palette:
-        - scheme: default
-    font:
-        text: 'Fira Sans'
-        code: 'Fira Mono'
+  name:
+    material
+  language: 'zh'
+  features:
+    # - announce.dismiss
+    - content.code.annotate
+    # - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    # - navigation.expand
+    - navigation.indexes
+    # - navigation.instant
+    # - navigation.prune
+    # - navigation.sections # 导航按钮
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    # - toc.integrate
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/favicon.png
+  icon:
+    logo: logo
 
 # Extensions
 markdown_extensions:
   - abbr
-  - admonition #MkDocs 警告框
-  - attr_list #脚注
+  - admonition
+  - attr_list
   - def_list
   - footnotes
   - md_in_html
@@ -60,7 +98,7 @@ markdown_extensions:
       generic: true
   - pymdownx.betterem:
       smart_enable: all
-  - pymdownx.caret #下划线
+  - pymdownx.caret
   - pymdownx.details
   - pymdownx.emoji:
       emoji_generator: !!python/name:materialx.emoji.to_svg
@@ -73,7 +111,7 @@ markdown_extensions:
       repo_url_shorthand: true
       user: squidfunk
       repo: mkdocs-material
-  - pymdownx.mark #文本高亮
+  - pymdownx.mark
   - pymdownx.smartsymbols
   - pymdownx.superfences:
       custom_fences:
@@ -84,4 +122,5 @@ markdown_extensions:
       alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
-  - pymdownx.tilde #删除线
+  - pymdownx.tilde
+
