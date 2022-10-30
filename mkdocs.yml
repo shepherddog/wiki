@@ -24,11 +24,10 @@ nav:
     - 监管机构: finance/监管机构.md 
     - 信贷产品简介: finance/信贷产品简介.md
   - 产品知识:
-    - 信贷产品架构设计: product/信贷产品架构设计.md
-    - 信贷业务流程设计: product/信贷业务流程设计.md
+    - 信贷产品架构设计: product/信贷产品设计详解.md
+    - 支付领域简介: product/支付领域简介.md
     - 会计分录和对账: product/会计分录和对账.md
     - 额度系统设计: product/额度系统设计.md
-    - 支付领域简介: product/支付领域简介.md
     - 支付领域简介: product/钱包产品详解.md
 
 # Config theme
