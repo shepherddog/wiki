@@ -1,12 +1,12 @@
 # Project Information
 site_name: Finance Wiki 
-site_description: Finance Wiki 是一个金融知识整合站点，提供有趣又实用的金融领域知识以及其他有帮助的内容，帮助广大金融从业者可以快速查询和上手金融业务。
+site_description: 个人知识整合站点，提供有趣又实用的金融领域知识以及其他有帮助的内容，可以快速查询和上手金融业务。
 site_author: Zhimin Bai
-site_url: https://shepherddog.github.io/FinanceWiki/
+site_url: https://shepherddog.github.io/wiki/
 
 # Repository
-repo_name: shepherddog/Finance Wiki
-repo_url: https://github.com/shepherddog/FinanceWiki/
+repo_name: shepherddog/wiki
+repo_url: https://github.com/shepherddog/wiki/
 
 # Copyright
 copyright: Copyright &copy; 2016 - 2022 Zhimin Bai
@@ -23,13 +23,13 @@ nav:
     - 银行体系: finance/银行体系.md
     - 监管机构: finance/监管机构.md 
     - 信贷产品简介: finance/信贷产品简介.md
-    - 支付领域简介: product/支付领域简介.md
-
   - 产品知识:
     - 信贷产品架构设计: product/信贷产品架构设计.md
     - 信贷业务流程设计: product/信贷业务流程设计.md
     - 会计分录和对账: product/会计分录和对账.md
     - 额度系统设计: product/额度系统设计.md
+    - 支付领域简介: product/支付领域简介.md
+    - 支付领域简介: product/钱包产品详解.md
 
 # Config theme
 theme:
