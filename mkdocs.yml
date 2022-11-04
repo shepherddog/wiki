@@ -15,21 +15,34 @@ copyright: Copyright &copy; 2016 - 2022 Zhimin Bai
 nav:
   - 简介:
     - Getting Started: index.md
-    - 关于本项目: intro/about.md
     - F.A.Q.: intro/faq.md
   - 金融知识:
-    - 金融机构概览: finance/金融机构概览.md
-    - 金融市场: finance/金融市场.md
-    - 银行体系: finance/银行体系.md
-    - 监管机构: finance/监管机构.md 
-    - 信贷产品简介: finance/信贷产品简介.md
+    - 金融机构:
+      - 监管机构: finance/监管机构.md
+      - 银行机构: finance/银行机构.md
+      - 金融中介: finance/金融中介.md
+    - 支付领域:
+      - 支付行业简介: finance/支付行业简介.md
+    - 信贷领域:
+      - 信贷产品介绍: finance/信贷产品介绍.md
+      - 信贷断直连: finance/信贷断直连.md
   - 产品知识:
-    - 信贷产品架构设计: product/信贷产品设计详解.md
-    - 支付领域简介: product/支付领域简介.md
-    - 会计分录和对账: product/会计分录和对账.md
-    - 额度系统设计: product/额度系统设计.md
-    - 支付领域简介: product/钱包产品详解.md
-
+    - 信贷产品:
+      - 信贷产品分析过程: product/信贷产品分析过程.md
+  - 工具软件:
+    - GIT: tools/git.md
+    - LaTex: tools/latex.md
+    - WSL: tools/wsl.md
+  - 编程语言:
+    - Java: tools/lang/java.md
+    - Python: tools/lang/python.md
+    - C&C++: tools/lang/c-cpp.md
+  - 软件工程:
+    - 编程范式: 
+      - MVC到DDD的演进: enginering/mvc-ddd.md
+      - 设计模式: enginering/design-pattern.md
+  - 关于:
+  
 # Config theme
 theme:
   name:
@@ -68,9 +81,6 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
-  font:
-    text: Roboto
-    code: Roboto Mono
   favicon: assets/favicon.png
   icon:
     logo: logo

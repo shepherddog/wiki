@@ -1,17 +1,9 @@
-# Welcome to MkDocs
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+# 欢迎来到本网站
 
-## Commands
+个人知识整合站点，提供有趣又实用的金融和产品知识以及其他有帮助的内容。
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+本网站致力于成为一个免费开放且持续更新的金融和产品知识整合站点。
 
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+## 本站知识预览
+![](intro/images/本站知识预览.png)
