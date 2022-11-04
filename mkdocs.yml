@@ -41,7 +41,6 @@ nav:
     - 编程范式: 
       - MVC到DDD的演进: enginering/mvc-ddd.md
       - 设计模式: enginering/design-pattern.md
-  - 关于:
   
 # Config theme
 theme:
