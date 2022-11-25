@@ -7,3 +7,4 @@ mkdocs-material/
 .well-known/
 resources/
 node_modules/
+.obsidian

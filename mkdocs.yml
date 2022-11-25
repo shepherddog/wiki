@@ -1,6 +1,6 @@
 # Project Information
-site_name: Finance Wiki 
-site_description: 个人知识整合站点，提供有趣又实用的金融领域知识以及其他有帮助的内容，可以快速查询和上手金融业务。
+site_name: FinTech Wiki 
+site_description: 金融科技知识整合站点，提供有趣又实用的金融领域知识以及其他有帮助的内容，可以快速查询和上手金融科技业务。
 site_author: Zhimin Bai
 site_url: https://shepherddog.github.io/wiki/
 
@@ -17,25 +17,25 @@ nav:
     - Getting Started: index.md
     - F.A.Q.: intro/faq.md
   - 金融知识:
-    - 金融机构:
-      - 监管机构: finance/监管机构.md
-      - 银行机构: finance/银行机构.md
-      - 金融中介: finance/金融中介.md
+    - 基础概念:
+      - 中国金融监管体系: finance/中国金融监管体系.md
+      - 银行机构管理: finance/银行机构管理.md
     - 支付领域:
       - 支付行业简介: finance/支付行业简介.md
-      - 钱包产品介绍: finance/钱包产品介绍.md
     - 信贷领域:
-      - 信贷产品介绍: finance/信贷产品介绍.md
+      - 信贷基础知识: finance/信贷基础知识.md
+      - 利率和还款方式介绍: finance/利率和还款方式介绍.md
       - 信贷断直连: finance/信贷断直连.md
   - 产品知识:
-    - 产品设计:
-      - 产品思维总结: product/产品思维总结.md
     - 信贷产品:
       - 信贷产品分析过程: product/信贷产品分析过程.md
   - 工具软件:
     - GIT: tools/git.md
     - LaTex: tools/latex.md
     - WSL: tools/wsl.md
+    - vscode: tools/editor/vscode.md
+    - vim: tools/editor/vim.md
+    - mermaid: tools/mermaid.md
   - 编程语言:
     - Java: tools/lang/java.md
     - Python: tools/lang/python.md
@@ -44,7 +44,9 @@ nav:
     - 编程范式: 
       - MVC到DDD的演进: enginering/mvc-ddd.md
       - 设计模式: enginering/design-pattern.md
-  
+    - 工程技巧:
+      - 45个小技巧优化代码: enginering/45个小技巧优化代码.md
+
 # Config theme
 theme:
   name:
