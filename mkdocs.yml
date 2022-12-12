@@ -1,6 +1,6 @@
 # Project Information
-site_name: FinTech Wiki 
-site_description: 金融科技知识整合站点，提供有趣又实用的金融领域知识以及其他有帮助的内容，可以快速查询和上手金融科技业务。
+site_name: ZM-Wiki 
+site_description: 个人知识整合站点，提供有趣又实用的金融、产品知识以及其他有帮助的内容。
 site_author: Zhimin Bai
 site_url: https://shepherddog.github.io/wiki/
 
@@ -19,6 +19,8 @@ nav:
   - 金融知识:
     - 基础概念:
       - 金融监管体系: finance/01-基础概念/金融监管体系.md
+      - 金融机构的划分: finance/01-基础概念/金融机构的划分.md
+      - 金融的4个关键要素: finance/01-基础概念/金融的4个关键要素.md
       - 银行运作简介: finance/01-基础概念/银行运作简介.md
     - 支付行业:
       - 支付行业简介: finance/03-支付领域/支付行业简介.md
@@ -62,7 +64,6 @@ nav:
     - Java: tools/lang/java.md
     - Python: tools/lang/python.md
     - C&C++: tools/lang/c-cpp.md
-
 
 # Config theme
 theme:
