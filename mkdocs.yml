@@ -31,15 +31,16 @@ nav:
       - 利率介绍: loan/01-基础概念/信贷概念-利率.md
     - 产品介绍:
       - 信贷产品简介: loan/02-产品介绍/信贷产品简介.md
-      - 消费金融产品: loan/02-产品介绍/信贷产品-消费金融.md
-      - 政府融资平台: loan/02-产品介绍/信贷产品-政府融资平台.md
+      - 消费金融产品: 
+        - 联合贷和助贷: loan/02-产品介绍/联合贷和助贷.md
+      - 政府融资平台: loan/02-产品介绍/政府融资平台.md
     - 风控监管:
-      - 主流风控模型: loan/03-风控监管/信贷风控-主流风控模型.md
-      - 信贷反欺诈: loan/03-风控监管/信贷风控-反欺诈.md
-      - 搭建用户标签体系: loan/03-风控监管/信贷风控-搭建用户标签体系.md
-      - 贷款拨备率和拨备覆盖率: loan/03-风控监管/信贷风控-贷款拨备率和拨备覆盖率.md
-      - Vintage、滚动率和迁移率: loan/03-风控监管/信贷风控-Vintage、滚动率和迁移率.md
-      - 信贷断直联: loan/03-风控监管/信贷监管-断直连.md
+      - 信贷主流风控模型: loan/03-风控监管/信贷主流风控模型.md
+      - 反欺诈: loan/03-风控监管/反欺诈.md
+      - 搭建用户标签体系: loan/03-风控监管/搭建用户标签体系.md
+      - 贷款拨备率和拨备覆盖率: loan/03-风控监管/贷款拨备率和拨备覆盖率.md
+      - Vintage、滚动率和迁移率: loan/03-风控监管/Vintage、滚动率和迁移率.md
+      - 断直联: loan/03-风控监管/断直连.md
     - 产品设计:
       - 信贷产品分析过程: loan/04-产品设计/信贷产品分析过程.md
   - 产品知识:
@@ -47,23 +48,20 @@ nav:
       - 产品思维地图: product/产品思维地图.md
   - 软件工程:
     - 编程范式: 
-      - MVC到DDD的演进: enginering/mvc-ddd.md
-      - 设计模式: enginering/design-pattern.md
-    - 工程技巧:
-      - 45个小技巧优化代码: enginering/45个小技巧优化代码.md
+      - DDD介绍: enginering/02-编程范式/DDD介绍.md
+      - MVC到DDD的架构演进: enginering/02-编程范式/MVC到DDD的架构演进.md
+      - 45个小技巧优化代码: enginering/02-编程范式/45个小技巧优化代码.md
+    - 编程语言:
+      - Java: enginering/03-编程语言/java.md
+      - Python: enginering/03-编程语言/python.md
+      - C&C++: enginering/03-编程语言/c-cpp.md
   - 工具软件:
     - 编码工具:
       - VS Code: tools/editor/vscode.md
       - Vim: tools/editor/vim.md
-      - LaTex: tools/latex.md
     - 版本控制:
       - GIT: tools/git.md
-    - 操作系统:
-      - WSL: tools/wsl.md
-  - 编程语言:
-    - Java: tools/lang/java.md
-    - Python: tools/lang/python.md
-    - C&C++: tools/lang/c-cpp.md
+
 
 # Config theme
 theme:
