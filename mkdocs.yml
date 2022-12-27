@@ -32,7 +32,7 @@ nav:
     - 产品介绍:
       - 信贷产品简介: loan/02-产品介绍/信贷产品简介.md
       - 消费金融产品: 
-        - 联合贷和助贷: loan/02-产品介绍/联合贷和助贷.md
+        - 消费金融常见资金合作模式: loan/02-产品介绍/资金合作模式.md
       - 政府融资平台: loan/02-产品介绍/政府融资平台.md
     - 风控监管:
       - 信贷主流风控模型: loan/03-风控监管/信贷主流风控模型.md
@@ -46,15 +46,16 @@ nav:
   - 产品知识:
     - 产品思维:
       - 产品思维地图: product/产品思维地图.md
-  - 软件工程:
-    - 编程范式: 
+ - 软件工程: 
+    - 设计模式:
       - DDD介绍: enginering/02-编程范式/DDD介绍.md
       - MVC到DDD的架构演进: enginering/02-编程范式/MVC到DDD的架构演进.md
+    - 编程技巧:
       - 45个小技巧优化代码: enginering/02-编程范式/45个小技巧优化代码.md
-    - 编程语言:
-      - Java: enginering/03-编程语言/java.md
-      - Python: enginering/03-编程语言/python.md
-      - C&C++: enginering/03-编程语言/c-cpp.md
+  - 编程语言:
+    - Java: enginering/03-编程语言/java.md
+    - Python: enginering/03-编程语言/python.md
+    - C&C++: enginering/03-编程语言/c-cpp.md
   - 工具软件:
     - 编码工具:
       - VS Code: tools/editor/vscode.md
