@@ -1,0 +1,2603 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="个人知识整合站点，提供有趣又实用的金融、产品知识以及其他有帮助的内容。">
+      
+      
+        <meta name="author" content="Zhimin Bai">
+      
+      
+        <link rel="canonical" href="https://shepherddog.github.io/wiki/tools/wsl/">
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>WSL - ZM-Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,700,700i%7CFira+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Fira Sans";--md-code-font:"Fira Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="ZM-Wiki" class="md-header__button md-logo" aria-label="ZM-Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ZM-Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              WSL
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/shepherddog/wiki/" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    shepherddog/wiki
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        简介
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../finance/01-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/%E9%87%91%E8%9E%8D%E7%9B%91%E7%AE%A1%E4%BD%93%E7%B3%BB/" class="md-tabs__link">
+        金融知识
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../loan/01-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/%E4%BF%A1%E8%B4%B7%E9%A2%86%E5%9F%9F%E7%AE%80%E4%BB%8B/" class="md-tabs__link">
+        信贷领域
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../product/%E4%BA%A7%E5%93%81%E6%80%9D%E7%BB%B4%E5%9C%B0%E5%9B%BE/" class="md-tabs__link">
+        产品知识
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../enginering/02-%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F/DDD%E4%BB%8B%E7%BB%8D/" class="md-tabs__link">
+        软件工程
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../enginering/03-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/java/" class="md-tabs__link">
+        编程语言
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../editor/vscode/" class="md-tabs__link md-tabs__link--active">
+        工具软件
+      </a>
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ZM-Wiki" class="md-nav__button md-logo" aria-label="ZM-Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    ZM-Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/shepherddog/wiki/" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    shepherddog/wiki
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../..">简介</a>
+          
+            <label for="__nav_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="简介" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          简介
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intro/faq/" class="md-nav__link">
+        F.A.Q.
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          金融知识
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="金融知识" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          金融知识
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          基础概念
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="基础概念" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          基础概念
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../finance/01-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/%E9%87%91%E8%9E%8D%E7%9B%91%E7%AE%A1%E4%BD%93%E7%B3%BB/" class="md-nav__link">
+        金融监管体系
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../finance/01-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/%E9%87%91%E8%9E%8D%E6%9C%BA%E6%9E%84%E7%9A%84%E5%88%92%E5%88%86/" class="md-nav__link">
+        金融机构的划分
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../finance/01-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/%E9%87%91%E8%9E%8D%E7%9A%844%E4%B8%AA%E5%85%B3%E9%94%AE%E8%A6%81%E7%B4%A0/" class="md-nav__link">
+        金融的4个关键要素
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../finance/01-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/%E9%93%B6%E8%A1%8C%E8%BF%90%E4%BD%9C%E7%AE%80%E4%BB%8B/" class="md-nav__link">
+        银行运作简介
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          支付行业
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="支付行业" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          支付行业
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../finance/03-%E6%94%AF%E4%BB%98%E9%A2%86%E5%9F%9F/%E6%94%AF%E4%BB%98%E8%A1%8C%E4%B8%9A%E7%AE%80%E4%BB%8B/" class="md-nav__link">
+        支付行业简介
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          信贷领域
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="信贷领域" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          信贷领域
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../loan/01-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/%E4%BF%A1%E8%B4%B7%E9%A2%86%E5%9F%9F%E7%AE%80%E4%BB%8B/" class="md-nav__link">
+        信贷领域简介
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          基础概念
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="基础概念" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          基础概念
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../loan/01-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/%E8%BF%98%E6%AC%BE%E6%96%B9%E5%BC%8F/" class="md-nav__link">
+        还款方式介绍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../loan/01-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/%E5%88%A9%E7%8E%87/" class="md-nav__link">
+        利率介绍
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_3">
+          产品介绍
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="产品介绍" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          产品介绍
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../loan/02-%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/%E4%BF%A1%E8%B4%B7%E4%BA%A7%E5%93%81%E7%AE%80%E4%BB%8B/" class="md-nav__link">
+        信贷产品简介
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_2" type="checkbox" id="__nav_3_3_2" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_3_2">
+          消费金融产品
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="消费金融产品" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          消费金融产品
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../loan/02-%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/%E8%81%94%E5%90%88%E8%B4%B7%E5%92%8C%E5%8A%A9%E8%B4%B7/" class="md-nav__link">
+        联合贷和助贷
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../loan/02-%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/%E6%94%BF%E5%BA%9C%E8%9E%8D%E8%B5%84%E5%B9%B3%E5%8F%B0/" class="md-nav__link">
+        政府融资平台
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_4">
+          风控监管
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="风控监管" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          风控监管
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../loan/03-%E9%A3%8E%E6%8E%A7%E7%9B%91%E7%AE%A1/%E4%BF%A1%E8%B4%B7%E4%B8%BB%E6%B5%81%E9%A3%8E%E6%8E%A7%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        信贷主流风控模型
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../loan/03-%E9%A3%8E%E6%8E%A7%E7%9B%91%E7%AE%A1/%E5%8F%8D%E6%AC%BA%E8%AF%88/" class="md-nav__link">
+        反欺诈
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../loan/03-%E9%A3%8E%E6%8E%A7%E7%9B%91%E7%AE%A1/%E6%90%AD%E5%BB%BA%E7%94%A8%E6%88%B7%E6%A0%87%E7%AD%BE%E4%BD%93%E7%B3%BB/" class="md-nav__link">
+        搭建用户标签体系
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../loan/03-%E9%A3%8E%E6%8E%A7%E7%9B%91%E7%AE%A1/%E8%B4%B7%E6%AC%BE%E6%8B%A8%E5%A4%87%E7%8E%87%E5%92%8C%E6%8B%A8%E5%A4%87%E8%A6%86%E7%9B%96%E7%8E%87/" class="md-nav__link">
+        贷款拨备率和拨备覆盖率
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../loan/03-%E9%A3%8E%E6%8E%A7%E7%9B%91%E7%AE%A1/Vintage%E3%80%81%E6%BB%9A%E5%8A%A8%E7%8E%87%E5%92%8C%E8%BF%81%E7%A7%BB%E7%8E%87/" class="md-nav__link">
+        Vintage、滚动率和迁移率
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../loan/03-%E9%A3%8E%E6%8E%A7%E7%9B%91%E7%AE%A1/%E6%96%AD%E7%9B%B4%E8%BF%9E/" class="md-nav__link">
+        断直联
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_5">
+          产品设计
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="产品设计" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          产品设计
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../loan/04-%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/%E4%BF%A1%E8%B4%B7%E4%BA%A7%E5%93%81%E5%88%86%E6%9E%90%E8%BF%87%E7%A8%8B/" class="md-nav__link">
+        信贷产品分析过程
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          产品知识
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="产品知识" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          产品知识
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_1">
+          产品思维
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="产品思维" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          产品思维
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../product/%E4%BA%A7%E5%93%81%E6%80%9D%E7%BB%B4%E5%9C%B0%E5%9B%BE/" class="md-nav__link">
+        产品思维地图
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          软件工程
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="软件工程" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          软件工程
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../enginering/02-%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F/DDD%E4%BB%8B%E7%BB%8D/" class="md-nav__link">
+        DDD介绍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../enginering/02-%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F/MVC%E5%88%B0DDD%E7%9A%84%E6%9E%B6%E6%9E%84%E6%BC%94%E8%BF%9B/" class="md-nav__link">
+        MVC到DDD的架构演进
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../enginering/02-%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F/45%E4%B8%AA%E5%B0%8F%E6%8A%80%E5%B7%A7%E4%BC%98%E5%8C%96%E4%BB%A3%E7%A0%81/" class="md-nav__link">
+        45个小技巧优化代码
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          编程语言
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="编程语言" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          编程语言
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../enginering/03-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/java/" class="md-nav__link">
+        Java
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../enginering/03-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/python/" class="md-nav__link">
+        Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../enginering/03-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/c-cpp/" class="md-nav__link">
+        C&C++
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../enginering/03-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/latex/" class="md-nav__link">
+        LaTeX
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          工具软件
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="工具软件" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          工具软件
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1" type="checkbox" id="__nav_7_1" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_7_1">
+          编码工具
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="编码工具" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_1">
+          <span class="md-nav__icon md-icon"></span>
+          编码工具
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../editor/vscode/" class="md-nav__link">
+        VS Code
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../editor/vim/" class="md-nav__link">
+        Vim
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../editor/vim-zen/" class="md-nav__link">
+        Vim之禅
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_2" type="checkbox" id="__nav_7_2" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_7_2">
+          版本控制
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="版本控制" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_2">
+          <span class="md-nav__icon md-icon"></span>
+          版本控制
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git/" class="md-nav__link">
+        GIT
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_3" type="checkbox" id="__nav_7_3" checked>
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_7_3">
+          操作系统
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="操作系统" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_3">
+          <span class="md-nav__icon md-icon"></span>
+          操作系统
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          WSL
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        WSL
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    引言1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wsl3" class="md-nav__link">
+    启用 WSL3
+  </a>
+  
+    <nav class="md-nav" aria-label="启用 WSL3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    自动安装
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    手动安装4
+  </a>
+  
+    <nav class="md-nav" aria-label="手动安装4">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linux-windows" class="md-nav__link">
+    启用适用于 Linux 的 Windows 子系统
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    安装内核更新包
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wsl" class="md-nav__link">
+    设置 WSL 默认版本
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wsl_1" class="md-nav__link">
+    安装 WSL 分发版
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    配置分发版5
+  </a>
+  
+    <nav class="md-nav" aria-label="配置分发版5">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ubuntu" class="md-nav__link">
+    运行 Ubuntu
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    初始化
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    基础配置
+  </a>
+  
+    <nav class="md-nav" aria-label="基础配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    更换为国内软件源
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    安装中文环境
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    安装编译环境7
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    进阶操作
+  </a>
+  
+    <nav class="md-nav" aria-label="进阶操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wslg-gui" class="md-nav__link">
+    使用 WSLg 运行 GUI 程序
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    安装图形环境，并使用远程桌面连接
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xming" class="md-nav__link">
+    使用 Xming 连接
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wsl-windows" class="md-nav__link">
+    WSL 与 Windows 文件的互访问
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visual-sudio-code" class="md-nav__link">
+    配合 Visual Sudio Code 进行编辑
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    FAQ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    外部链接
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    参考资料与注释
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    引言1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wsl3" class="md-nav__link">
+    启用 WSL3
+  </a>
+  
+    <nav class="md-nav" aria-label="启用 WSL3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    自动安装
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    手动安装4
+  </a>
+  
+    <nav class="md-nav" aria-label="手动安装4">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linux-windows" class="md-nav__link">
+    启用适用于 Linux 的 Windows 子系统
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    安装内核更新包
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wsl" class="md-nav__link">
+    设置 WSL 默认版本
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wsl_1" class="md-nav__link">
+    安装 WSL 分发版
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    配置分发版5
+  </a>
+  
+    <nav class="md-nav" aria-label="配置分发版5">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ubuntu" class="md-nav__link">
+    运行 Ubuntu
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    初始化
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    基础配置
+  </a>
+  
+    <nav class="md-nav" aria-label="基础配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    更换为国内软件源
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    安装中文环境
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    安装编译环境7
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    进阶操作
+  </a>
+  
+    <nav class="md-nav" aria-label="进阶操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wslg-gui" class="md-nav__link">
+    使用 WSLg 运行 GUI 程序
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    安装图形环境，并使用远程桌面连接
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xming" class="md-nav__link">
+    使用 Xming 连接
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wsl-windows" class="md-nav__link">
+    WSL 与 Windows 文件的互访问
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visual-sudio-code" class="md-nav__link">
+    配合 Visual Sudio Code 进行编辑
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    FAQ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    外部链接
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    参考资料与注释
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/shepherddog/wiki/edit/master/docs/tools/wsl.md" title="编辑此页" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+  <h1>WSL</h1>
+
+<p><img alt="头图" src="../images/wsl-header.png" /></p>
+<p>本章主要介绍了在 Windows 系统下使用 Windows Subsystem for Linux 运行 Linux 环境的方法。</p>
+<hr />
+<h2 id="1">引言<sup id="fnref:ref1"><a class="footnote-ref" href="#fn:ref1">1</a></sup><a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<p>众所周知，尽管现在大部分学校的竞赛练习环境都是构建在 XP 等 Windows 系操作系统上，但是在 NOI 系列赛中，早已用上了 NOI Linux 这个 Ubuntu 操作系统的修改版。</p>
+<p>NOI 竞赛（自 2021 年 9 月 1 日）的环境要求如下。<sup id="fnref:ref2"><a class="footnote-ref" href="#fn:ref2">2</a></sup></p>
+<table>
+<thead>
+<tr>
+<th align="left">类别</th>
+<th align="left">软件或模块</th>
+<th align="left">版本</th>
+<th align="left">备注说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">系统</td>
+<td align="left">Linux 内核</td>
+<td align="left"><code>5.4.0-42-generic</code></td>
+<td align="left">64 位 x86 (AMD64)</td>
+</tr>
+<tr>
+<td align="left">语言环境</td>
+<td align="left">GCC（<code>gcc</code> 和 <code>g++</code>）</td>
+<td align="left"><code>9.3.0</code></td>
+<td align="left">C 和 C++ 编译器</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">FPC</td>
+<td align="left"><code>3.0.4</code></td>
+<td align="left">Pascal 编译器<!-- 现在谁还用 Pascal 打竞赛啊.jpg --></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Python 2</td>
+<td align="left"><code>2.7</code></td>
+<td align="left">非竞赛语言</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Python 3</td>
+<td align="left"><code>3.8</code></td>
+<td align="left">非竞赛语言</td>
+</tr>
+<tr>
+<td align="left">调试工具</td>
+<td align="left">GDB</td>
+<td align="left"><code>9.1</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">DDD</td>
+<td align="left"><code>3.3.12</code></td>
+<td align="left">GDB 的 GUI 前端</td>
+</tr>
+<tr>
+<td align="left">集成开发环境（IDE）</td>
+<td align="left">Code::Blocks</td>
+<td align="left"><code>20.03</code></td>
+<td align="left">C/C++ IDE</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Lazarus</td>
+<td align="left"><code>2.0.6</code></td>
+<td align="left">Pascal IDE</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Geany</td>
+<td align="left"><code>1.36</code></td>
+<td align="left">C/C++/Pascal（轻量级）IDE</td>
+</tr>
+<tr>
+<td align="left">文本编辑工具</td>
+<td align="left">Visual Studio Code</td>
+<td align="left"><code>1.54.3</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">GNU Emacs</td>
+<td align="left"><code>26.3</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">gedit</td>
+<td align="left"><code>3.36.2</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Vim</td>
+<td align="left"><code>8.1</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Joe</td>
+<td align="left"><code>4.6</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">nano</td>
+<td align="left"><code>4.8</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Sublime Text</td>
+<td align="left"><code>3.2.2</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">其它软件</td>
+<td align="left">Firefox</td>
+<td align="left"><code>79.0</code></td>
+<td align="left">浏览器</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Midnight Commander (<code>mc</code>)</td>
+<td align="left"><code>4.8.24</code></td>
+<td align="left">文件管理器</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">xterm (uxterm)</td>
+<td align="left"><code>3.5.3</code></td>
+<td align="left">终端</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Arbiter-local</td>
+<td align="left"><code>1.02</code></td>
+<td align="left">程序评测工具单机版</td>
+</tr>
+</tbody>
+</table>
+<p>考场环境与一般环境会有一系列差异：</p>
+<ul>
+<li>命令行上的操作和图形界面上的操作会有差异。</li>
+<li>Linux 和 Windows 的差异，如对于大小写的敏感性差异。</li>
+<li>不同编译器的行为（MSVC 和 GCC）和不同版本的编译器（Windows 上和 Linux 上的 GCC，32 位和 64 位的 Linux GCC，GCC 7 和 GCC 8 等）的行为，如对变量初始化和对数组下标越界的处理会有差异。</li>
+<li>不同评测系统（洛谷和 Arbiter）的超时检查和内存限制检查会有差异。</li>
+</ul>
+<p>这有可能导致一系列的尴尬情况：</p>
+<ul>
+<li>想用<kbd>Ctrl</kbd>+<kbd>C</kbd>复制，结果退出了程序。</li>
+<li>平时 AC 的程序模板到了 Linux 上就 WA。</li>
+</ul>
+<p>为了防止考场上出现此类尴尬情况，我们必须要提前熟悉 Linux 系统的操作方法。</p>
+<p>虽然 NOI 的官网已经放出了 NOI Linux 的 ISO 镜像，虚拟机的配置较为麻烦。且由于 NOI Linux 默认自带图形界面，无法保证在低配系统上流畅运行。</p>
+<p>Windows 10 在一周年更新时推出了 Linux 子系统（WSL），在 2020 年 5 月更新中升级到了 WSL 2。截至 2020 年 6 月 1 日，WSL 已支持安装 Ubuntu、openSUSE Leap、Kali、Debian 等主流 Linux 分发版。但 WSL 并不支持 NOI 评测用的 Arbiter。</p>
+<details class="note" open="open">
+<summary><a href="https://zh.wikipedia.org/zh-cn/%E9%80%82%E7%94%A8%E4%BA%8E_Linux_%E7%9A%84_Windows_%E5%AD%90%E7%B3%BB%E7%BB%9F">什么是 Linux 子系统（WSL）</a> </summary>
+<p>适用于 Linux 的 Windows 子系统（英语：Windows Subsystem for Linux，简称 WSL）是一个为在 Windows 10、Windows 11 与 Windows Server 2019 上能够原生运行 Linux 二进制可执行文件（ELF 格式）的兼容层。</p>
+<p>WSL 可让开发人员按原样运行 GNU/Linux 环境 - 包括大多数命令行工具、实用工具和应用程序 - 且不会产生虚拟机开销。</p>
+<p>WSL 仅在版本 1607 之后的 64 位版本的 Windows 10 中可用。它也可在 Windows Server 2019 中使用。</p>
+</details>
+<hr />
+<h2 id="wsl3">启用 WSL<sup id="fnref:ref3"><a class="footnote-ref" href="#fn:ref3">3</a></sup><a class="headerlink" href="#wsl3" title="Permanent link">&para;</a></h2>
+<h3 id="_1">自动安装<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<details class="warning" open="open">
+<summary>Warning</summary>
+<p>本部分适用于 Windows 10 版本 2004 及更高版本（内部版本 19041 及更高版本）或 Windows 11。</p>
+<p>如果你正在使用 2004 以下版本或你的电脑不支持虚拟化，请阅读下面的手动安装一节。</p>
+<p>如果你正在使用 Windows 10 1607 以下版本的 Windows，你的系统不支持 WSL。</p>
+</details>
+<ol>
+<li>
+<p>以管理员身份打开 Windows Powershell（右击 "开始" 按钮，选择 Windows PowerShell（管理员）或 Windows 终端（管理员）)</p>
+</li>
+<li>
+<p>输入 <code>wsl --install</code>，并等待所有组件自动安装完成。期间你可能需要重启你的计算机来启用必要的 Windows 功能。</p>
+</li>
+<li>
+<p>安装完成后，你可以在 "开始" 菜单或 Windows 终端的标签页中找到你安装的发行版。</p>
+</li>
+<li>
+<p>接下来，请转到下面“配置分发版”一节完成其他设置。</p>
+</li>
+</ol>
+<h3 id="4">手动安装<sup id="fnref:ref4"><a class="footnote-ref" href="#fn:ref4">4</a></sup><a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
+<details class="warning" open="open">
+<summary>Warning</summary>
+<p>下面介绍手动安装 WSL 的步骤。如果你已经完成了自动安装，请跳过此部分。</p>
+</details>
+<h4 id="linux-windows">启用适用于 Linux 的 Windows 子系统<a class="headerlink" href="#linux-windows" title="Permanent link">&para;</a></h4>
+<p>在安装适用于 WSL 的任何 Linux 分发版之前，必须在下述两种方法中选择一种，以确保启用“适用于 Linux 的 Windows 子系统”可选功能：</p>
+<p><strong>使用命令行：</strong></p>
+<ol>
+<li>
+<p>以管理员身份打开 PowerShell 并运行：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">Enable-WindowsOptionalFeature</span> <span class="n">-Online</span> <span class="n">-FeatureName</span> <span class="n">Microsoft-Windows-Subsystem-Linux</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c"># 如果你只想要使用 WSL 1 请跳过此步骤</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nb">Enable-WindowsOptionalFeature</span> <span class="n">-Online</span> <span class="n">-FeatureName</span> <span class="n">VirtualMachinePlatform</span>
+</code></pre></div>
+</li>
+<li>
+<p>出现提示时，重启计算机。</p>
+</li>
+</ol>
+<p><strong>使用图形界面：</strong></p>
+<p><img alt="Windows 功能" src="../images/wsl-windows-features.png" /></p>
+<ol>
+<li>
+<p>打开“控制面板”</p>
+</li>
+<li>
+<p>访问“程序和功能”子菜单“打开或关闭 Windows 功能”</p>
+</li>
+<li>
+<p>选择 "适用于 Linux 的 Windows 子系统" 与 "虚拟机平台"</p>
+</li>
+<li>
+<p>点击确定</p>
+</li>
+<li>
+<p>重启</p>
+</li>
+</ol>
+<h4 id="_2">安装内核更新包<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<p>如果你想要使用 WSL 1, 请跳过此步骤。</p>
+<p>下载 <a href="https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi">适用于 x64 计算机的 WSL2 Linux 内核更新包</a> 并安装。</p>
+<h4 id="wsl">设置 WSL 默认版本<a class="headerlink" href="#wsl" title="Permanent link">&para;</a></h4>
+<p>绝大部分情况下，建议使用 WSL 2。
+WSL 1 与 WSL 2 的区别，请见 <a href="https://docs.microsoft.com/zh-cn/windows/wsl/compare-versions">比较 WSL 2 和 WSL 1</a></p>
+<details class="note">
+<summary>关于 systemd</summary>
+<p>WSL 1 完全不支持 systemd（这意味着一些需要 systemd 的功能无法实现或需要别的 hack），WSL 2 可以使用 <a href="https://github.com/arkane-systems/genie">genie</a>。
+此外，<a href="https://github.com/yuk7/arch-systemctl-alt">yuk7/arch-systemctl-alt</a> 项目提供了一个在 WSL 1 与 2 都可用的 alternative script，但是它只具有部分兼容且只在 ArchWSL 进行了测试。</p>
+</details>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c"># 将 WSL 默认版本设置为 WSL 2</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">wsl</span> <span class="p">-</span><span class="n">-set-default-version</span> <span class="n">2</span>
+</code></pre></div>
+<h4 id="wsl_1">安装 WSL 分发版<a class="headerlink" href="#wsl_1" title="Permanent link">&para;</a></h4>
+<p><img alt="搜索页" src="../images/wsl-search-page.png" /></p>
+<p>进入 Microsoft Store，搜索“Ubuntu”，然后选择“Ubuntu”，点击“安装”进行安装。也可打开 <a href="https://www.microsoft.com/zh-cn/p/ubuntu/9nblggh4msv6">Ubuntu 的商店页面</a>。</p>
+<details class="warning" open="open">
+<summary>Warning</summary>
+<p>Microsoft Store 的 Ubuntu 随着 Ubuntu 的更新而更新，因此内容可能会有所改变。如果想获取稳定的 Ubuntu 长期支持版，可以在 Microsoft Store 安装 Ubuntu 的 LTS 版本。</p>
+</details>
+<h2 id="5">配置分发版<sup id="fnref:ref5"><a class="footnote-ref" href="#fn:ref5">5</a></sup><a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
+<p>本章以 Windows 自动安装的 Ubuntu 为例。</p>
+<h3 id="ubuntu">运行 Ubuntu<a class="headerlink" href="#ubuntu" title="Permanent link">&para;</a></h3>
+<p>打开“开始”菜单找到 Ubuntu 并启动，或使用 <code>wsl</code> 命令从 Windows 命令行启动。</p>
+<p>可以为 Ubuntu 创建应用程序磁贴或固定至任务栏，以在下次方便地打开。</p>
+<h3 id="_3">初始化<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>第一次运行 Ubuntu，需要完成初始化。</p>
+<div class="highlight"><pre><span></span><code>Installing, this may take a few minutes...
+</code></pre></div>
+<p>等待一两分钟时间，系统会提示创建新的用户帐户。</p>
+<div class="highlight"><pre><span></span><code>Please create a default UNIX user account. The username does not need to match your Windows username.
+For more information visit: https://aka.ms/wslusers
+Enter new UNIX username: chtholly
+</code></pre></div>
+<p>输入完用户名以后会提示输入密码。在 Linux 中，输入密码时屏幕上不显示文字属于正常现象。</p>
+<div class="highlight"><pre><span></span><code>Enter new UNIX password:
+</code></pre></div>
+<p>设置好帐户名和密码后，WSL 就安装完成了。</p>
+<div class="highlight"><pre><span></span><code>Installation successful!
+To run a command as administrator (user &quot;root&quot;), use &quot;sudo &lt;command&gt;&quot;.
+See &quot;man sudo_root&quot; for details.
+
+chtholly@SENIORIOUS:~$
+</code></pre></div>
+<h2 id="_4">基础配置<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>初次安装好的系统不附带任何 C/C++ 编译器，需要手动配置环境。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="gp">$ </span>gcc
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="go">The program &#39;gcc&#39; is currently not installed. You can install it by typing:</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="go">sudo apt install gcc</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="gp">$ </span>g++
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="go">The program &#39;g++&#39; is currently not installed. You can install it by typing:</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="go">sudo apt install g++</span>
+</code></pre></div>
+<h3 id="_5">更换为国内软件源<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>Ubuntu 默认的软件源在国外。可以换成国内的软件源以加快速度，如 <a href="https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/">清华 TUNA 的软件源</a>。</p>
+<details class="warning" open="open">
+<summary>使用与自己系统版本匹配的软件源</summary>
+<p>请在页面中寻找与自己系统版本相配的源（可使用 <code>sudo lsb_release -a</code> 查看 Ubuntu 版本）。</p>
+<p>除非你知道你在做什么，否则不要使用与自己的系统版本不匹配的源！</p>
+</details>
+<p>使用以下命令更新软件和软件源：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="gp"># </span>cp /etc/apt/sources.list /etc/apt/sources.list.bak
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="gp"># </span>vim /etc/apt/sources.list
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="go">...（按 i 之后将上文的源右键粘贴进去，编辑完后按 Esc，再输入 :wq 和回车）</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="gp"># </span>apt update
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="gp"># </span>apt upgrade -y
+</code></pre></div>
+<h3 id="_6">安装中文环境<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="gp"># </span>apt install language-pack-zh-han* -y
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="gp"># </span>locale-gen zh_CN.GB18030 <span class="o">&amp;&amp;</span> locale-gen zh_CN.UTF-8
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="gp"># </span>apt install fontconfig -y
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="gp"># </span>apt install fonts-noto-cjk -y <span class="c1"># 中文字体</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="gp"># </span>apt install fonts-wqy-microhei -y
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="gp"># </span>apt install fonts-wqy-zenhei -y
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="gp"># </span>dpkg-reconfigure locales
+</code></pre></div>
+<p>使用 <code>sudo dpkg-reconfigure locales</code> 进入菜单，按空格选择带 <code>zh_CN</code> 的选项（推荐 <code>zh_CN.UTF-8 UTF-8</code>），选完后回车。</p>
+<div class="highlight"><pre><span></span><code>Locales to be generated:
+
+    ...
+    [ ] zh_CN.GBK GBK
+    [*] zh_CN.UTF-8 UTF-8
+    [ ] zh_HK BIG5-HKSCS
+    ...
+
+        &lt;Ok&gt;            &lt;Cancel&gt;
+</code></pre></div>
+<p>下一个菜单中选择 <code>zh_CN.UTF-8</code> 回车。</p>
+<div class="highlight"><pre><span></span><code>Default locale for the system environment:
+
+             None
+             C.UTF-8
+             en_US.UTF-8
+            [zh_CN.UTF-8]
+
+        &lt;Ok&gt;            &lt;Cancel&gt;
+</code></pre></div>
+<p>之后关闭 WSL 并重启，系统就会变成中文。</p>
+<p>再依次输入下列命令，把 <code>man</code> 帮助页替换为中文。<sup id="fnref:ref6"><a class="footnote-ref" href="#fn:ref6">6</a></sup></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="gp"># </span>apt install manpages-zh
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="gp"># </span>sed -i <span class="s1">&#39;s|/usr/share/man|/usr/share/man/zh_CN|g&#39;</span> /etc/manpath.config
+</code></pre></div>
+<p>可以用 <code>man help</code> 测试。</p>
+<h3 id="7">安装编译环境<sup id="fnref:ref7"><a class="footnote-ref" href="#fn:ref7">7</a></sup><a class="headerlink" href="#7" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="gp"># </span>apt install -y build-essential vim ddd gdb fpc emacs gedit anjuta lazarus
+</code></pre></div>
+<p>这里安装的是基础 + NOI 官方要求的环境，如有需要可以用 <code>apt install &lt;程序名&gt;</code> 来安装其它软件包。
+若想安装其他版本可以参考 Debian 官方的 <a href="https://www.debian.org/doc/manuals/debian-reference/ch02.zh-cn.html">包管理手册</a>。</p>
+<p>以下为一个示例程序：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="gp">$ </span>vim cpuid.cpp
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="go">...</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="gp">$ </span>g++ -Wall cpuid.cpp -o cpuid
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="gp">$ </span>./cpuid
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="go">AMD Ryzen 5 1400 Quad-Core Processor</span>
+</code></pre></div>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>Linux 环境下可执行文件可不带扩展名，实现方式看上方命令。</p>
+</details>
+<h2 id="_7">进阶操作<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h3 id="wslg-gui">使用 WSLg 运行 GUI 程序<a class="headerlink" href="#wslg-gui" title="Permanent link">&para;</a></h3>
+<p>如果你使用 Windows 11 Build 22000 以上版本，则可以使用 WSL 2 提供的集成的桌面体验。该功能允许你直接安装并启动 Linux 桌面程序而无须其他配置。</p>
+<p>参见 <a href="https://docs.microsoft.com/zh-cn/windows/wsl/tutorials/gui-apps">在适用于 Linux 的 Windows 子系统上运行 Linux GUI 应用（预览）</a></p>
+<h3 id="_8">安装图形环境，并使用远程桌面连接<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>如果你使用的版本尚不支持 WSLg, 可以尝试使用以下指南开启图形界面功能。</p>
+<p>以下以 Xfce 为例。</p>
+<p>如果只想安装 Xfce，可以执行以下命令：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="gp"># </span>apt install xfce4 tightvncserver -y
+</code></pre></div>
+<p>如果除 Xfce 外想要更多的软件，可以执行以下命令：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="gp"># </span>sudo apt install xubuntu-desktop -y
+</code></pre></div>
+<p>图形环境文件较大，下载解包需要一定时间。</p>
+<p>配置 xrdp：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="gp"># </span>apt install xrdp -y
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="gp">$ </span><span class="nb">echo</span> <span class="s2">&quot;xfce4-session&quot;</span> &gt;~/.xsession
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="gp"># </span>service xrdp restart
+</code></pre></div>
+<p>为了防止和计算机本来带的远程桌面冲突，最好换一下端口。</p>
+<p><img alt="不换端口的结果" src="../images/wsl-result-of-not-changing-ports.png" /></p>
+<p>运行命令 <code>sudo sed 's/port=[0-9]{1,5}/port=otherport/' /etc/xrdp/xrdp.ini</code>，其中 <code>otherport</code> 为其他端口（如 <code>3390</code>）。</p>
+<div class="highlight"><pre><span></span><code>[globals]
+...
+port=3390
+</code></pre></div>
+<p>运行 <code>sudo service xrdp restart</code>，然后去开始菜单，用 <code>localhost:otherport</code> 来访问。</p>
+<p><img alt="" src="../images/wsl-login-using-non-root.png" /></p>
+<p><img alt="" src="../images/wsl-first-login.png" /></p>
+<h3 id="xming">使用 Xming 连接<a class="headerlink" href="#xming" title="Permanent link">&para;</a></h3>
+<p>进入 Ubuntu 环境，安装 xterm：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="gp"># </span>apt install xterm -y
+</code></pre></div>
+<p>退出 Ubuntu。</p>
+<p>从 <a href="https://sourceforge.net/projects/xming/">Xming X Server 下载地址</a> 下载最新的 Xming Server，然后安装：</p>
+<p><img alt="" src="../images/wsl-xming-setup-wizard.png" /></p>
+<p>如果安装完后忘记勾选 Launch Xming，需在开始菜单里打开 Xming：</p>
+<p><img alt="别忘了！" src="../images/wsl-xming.png" /></p>
+<p>之后再回到 Ubuntu，键入如下指令：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="gp">$ </span><span class="nv">DISPLAY</span><span class="o">=</span>:0 xterm
+</code></pre></div>
+<p><img alt="" src="../images/wsl-open-xterm.png" /></p>
+<p>如果使用了 xfce4，可以在弹出的窗口中使用如下命令激活 xfce4：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="gp">$ </span>xfce4-session
+</code></pre></div>
+<p><img alt="" src="../images/wsl-open-xfce4-session.png" /></p>
+<p>运行结果如图。（在 Xming 中使用<kbd>Ctrl</kbd>+<kbd>C</kbd>就可以退出该界面。）</p>
+<p><img alt="" src="../images/wsl-xfce.png" /></p>
+<h3 id="wsl-windows">WSL 与 Windows 文件的互访问<a class="headerlink" href="#wsl-windows" title="Permanent link">&para;</a></h3>
+<p>Windows 下的硬盘被自动挂载至 Linux 环境下的 <code>/mnt</code> 文件夹下。
+如 C 盘在 WSL 下的路径为 <code>/mnt/c</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="go">PS C:\Users\chtholly&gt; bash</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="go">/mnt/c/Users/chtholly$ echo &quot;Hello world!&quot; &gt; hello</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="go">/mnt/c/Users/chtholly$ exit</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="go">PS C:\Users\chtholly&gt; cat hello</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="go">Hello world!</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="go">PS C:\Users\chtholly&gt; echo &quot;Welcome!&quot; &gt; welcome</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="go">PS C:\Users\chtholly&gt; bash</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="go">/mnt/c/Users/chtholly$ cat welcome</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="go">Welcome!</span>
+</code></pre></div>
+<p>相对的，也可以从文件管理器访问 WSL 目录。在安装 WSL 后，可以在资源管理器的侧边栏中发现 Linux 项，在其中可以访问所有安装的发行版其中的文件。</p>
+<p>同样，也可以在资源管理器的路径或运行（Win+R）中直接输入 <code>\\wsl$</code> 来转到 WSL 的目录。</p>
+<p>也可以直接使用诸如 <code>\\wsl$\Ubuntu\home\</code> 的路径访问其子文件夹。</p>
+<h3 id="visual-sudio-code">配合 Visual Sudio Code 进行编辑<a class="headerlink" href="#visual-sudio-code" title="Permanent link">&para;</a></h3>
+<p>如果习惯在 Windows 环境下使用 <a href="../editor/vscode/">Visual Studio Code</a> 进行代码编辑，可以安装 VSC 中的 <code>Remote - WSL</code> 插件，更方便地对 WSL 系统中的文件进行编辑。</p>
+<p>通过 <code>Remote - WSL</code>，可以在 Windows 下的 VS Code 界面中直接对 WSL 子系统进行操作，更加方便地编辑子系统目录下的文件、更方便地使用终端进行调试。</p>
+<p>通过在 WSL 中直接键入 <code>code .</code>，可以在该目录下直接唤出 Visual Studio Code，对于该目录下的文件进行编辑。</p>
+<p>同时，可以通过类似 <code>code filename</code> 的命令，对于指定文件进行编辑。</p>
+<p>在插件 <code>Remote - WSL</code> 的 Getting Started 页面，包含对于编辑操作的详细简介。</p>
+<p>同时，也可以参考 Visual Studio Code 的官方文档中关于 WSL 的内容（<a href="https://code.visualstudio.com/docs/remote/wsl-tutorial">Remote development in WSL</a>），这篇文章包含从 WSL 安装到配合插件使用的全流程的更详细的介绍。</p>
+<h2 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">&para;</a></h2>
+<p>参见：<a href="https://docs.microsoft.com/zh-cn/windows/wsl/faq">常见问题</a>，<a href="https://docs.microsoft.com/zh-cn/windows/wsl/wsl2-faq">WSL 2 常见问题解答</a></p>
+<ul>
+<li>
+<p>如何在子系统下进行 xxx？</p>
+<p>可以用自带命令行，或者使用图形界面。
+比如说 vim，在命令行中键入 <code>man vim</code>，会给出一份详尽的使用方法。
+亦可使用 <code>vim --help</code>。</p>
+</li>
+<li>
+<p>对系统资源的占用量？</p>
+<p>这个系统和 Windows 10 共用 Host，所以理论上是比虚拟机占用小的。</p>
+</li>
+</ul>
+<h2 id="_9">外部链接<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://docs.microsoft.com/zh-cn/windows/wsl/about">关于适用于 Linux 的 Windows 子系统</a></li>
+<li><a href="https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/">Ubuntu 镜像使用帮助，清华 TUNA</a></li>
+<li><a href="https://dowww.spencerwoo.com">Dev on Windows with WSL（在 Windows 上用 WSL 优雅开发）</a></li>
+<li><a href="https://github.com/sirredbeard/Awesome-WSL">GitHub 上的 Awesome-WSL</a></li>
+<li><a href="https://docs.microsoft.com/zh-cn/windows/wsl/troubleshooting">排查适用于 Linux 的 Windows 子系统问题</a></li>
+</ul>
+<h2 id="_10">参考资料与注释<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:ref1">
+<p><a href="https://www.luogu.com.cn/blog/asfr/Run-Ubuntu-On-Windows10">洛谷日报 #6</a>&#160;<a class="footnote-backref" href="#fnref:ref1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ref2">
+<p><a href="https://noi.cn/gynoi/jsgz/2021-07-16/732450.shtml">NOI Linux 2.0 发布，将于 9 月 1 日起正式启用！</a>&#160;<a class="footnote-backref" href="#fnref:ref2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ref3">
+<p><a href="https://docs.microsoft.com/zh-cn/windows/wsl/install">安装 WSL, Microsoft Docs</a>&#160;<a class="footnote-backref" href="#fnref:ref3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ref4">
+<p><a href="https://docs.microsoft.com/zh-cn/windows/wsl/install-manual">旧版 WSL 的手动安装步骤</a>&#160;<a class="footnote-backref" href="#fnref:ref4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ref5">
+<p><a href="https://wiki.ubuntu.com/WSL">WSL-Ubuntu 维基，ubuntu wiki</a>&#160;<a class="footnote-backref" href="#fnref:ref5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ref6">
+<p><a href="https://blog.csdn.net/qq_14989227/article/details/72954523">Ubuntu 的 man 命令帮助如何设置中文版，Frank 看庐山，2017-06-09</a>&#160;<a class="footnote-backref" href="#fnref:ref6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ref7">
+<p><a href="https://blogs.windows.com/buildingapps/2016/03/30/run-bash-on-ubuntu-on-windows/#cie8WdR3uSjgR5Ru.97">Run Bash on Ubuntu on Windows, Mike Harsh, 2016-05-30, Windows Blog</a>&#160;<a class="footnote-backref" href="#fnref:ref7" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            回到页面顶部
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="页脚" >
+      
+        
+        <a href="../git/" class="md-footer__link md-footer__link--prev" aria-label="上一页: GIT" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              GIT
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2016 - 2022 Zhimin Bai
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.tooltips", "navigation.indexes", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+    
+  </body>
+</html>

@@ -1,0 +1,3164 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="个人知识整合站点，提供有趣又实用的金融、产品知识以及其他有帮助的内容。">
+      
+      
+        <meta name="author" content="zhiminbai">
+      
+      
+        <link rel="canonical" href="https://shepherddog.github.io/wiki/enginering/02-%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F/45%E4%B8%AA%E5%B0%8F%E6%8A%80%E5%B7%A7%E4%BC%98%E5%8C%96%E4%BB%A3%E7%A0%81/">
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>45个小技巧优化代码 - ZM-Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,700,700i%7CFira+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Fira Sans";--md-code-font:"Fira Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="ZM-Wiki" class="md-header__button md-logo" aria-label="ZM-Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ZM-Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              45个小技巧优化代码
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/shepherddog/wiki/" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    shepherddog/wiki
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        简介
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../finance/01-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/%E9%87%91%E8%9E%8D%E7%9B%91%E7%AE%A1%E4%BD%93%E7%B3%BB/" class="md-tabs__link">
+        金融知识
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../loan/01-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/%E4%BF%A1%E8%B4%B7%E9%A2%86%E5%9F%9F%E7%AE%80%E4%BB%8B/" class="md-tabs__link">
+        信贷领域
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../product/%E4%BA%A7%E5%93%81%E6%80%9D%E7%BB%B4%E5%9C%B0%E5%9B%BE/" class="md-tabs__link">
+        产品知识
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../DDD%E4%BB%8B%E7%BB%8D/" class="md-tabs__link md-tabs__link--active">
+        软件工程
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../03-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/java/" class="md-tabs__link">
+        编程语言
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../tools/editor/vscode/" class="md-tabs__link">
+        工具软件
+      </a>
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="ZM-Wiki" class="md-nav__button md-logo" aria-label="ZM-Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    ZM-Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/shepherddog/wiki/" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    shepherddog/wiki
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../..">简介</a>
+          
+            <label for="__nav_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="简介" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          简介
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intro/faq/" class="md-nav__link">
+        F.A.Q.
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          金融知识
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="金融知识" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          金融知识
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          基础概念
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="基础概念" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          基础概念
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../finance/01-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/%E9%87%91%E8%9E%8D%E7%9B%91%E7%AE%A1%E4%BD%93%E7%B3%BB/" class="md-nav__link">
+        金融监管体系
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../finance/01-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/%E9%87%91%E8%9E%8D%E6%9C%BA%E6%9E%84%E7%9A%84%E5%88%92%E5%88%86/" class="md-nav__link">
+        金融机构的划分
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../finance/01-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/%E9%87%91%E8%9E%8D%E7%9A%844%E4%B8%AA%E5%85%B3%E9%94%AE%E8%A6%81%E7%B4%A0/" class="md-nav__link">
+        金融的4个关键要素
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../finance/01-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/%E9%93%B6%E8%A1%8C%E8%BF%90%E4%BD%9C%E7%AE%80%E4%BB%8B/" class="md-nav__link">
+        银行运作简介
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          支付行业
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="支付行业" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          支付行业
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../finance/03-%E6%94%AF%E4%BB%98%E9%A2%86%E5%9F%9F/%E6%94%AF%E4%BB%98%E8%A1%8C%E4%B8%9A%E7%AE%80%E4%BB%8B/" class="md-nav__link">
+        支付行业简介
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          信贷领域
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="信贷领域" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          信贷领域
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../loan/01-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/%E4%BF%A1%E8%B4%B7%E9%A2%86%E5%9F%9F%E7%AE%80%E4%BB%8B/" class="md-nav__link">
+        信贷领域简介
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          基础概念
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="基础概念" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          基础概念
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../loan/01-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/%E8%BF%98%E6%AC%BE%E6%96%B9%E5%BC%8F/" class="md-nav__link">
+        还款方式介绍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../loan/01-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/%E5%88%A9%E7%8E%87/" class="md-nav__link">
+        利率介绍
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_3">
+          产品介绍
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="产品介绍" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          产品介绍
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../loan/02-%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/%E4%BF%A1%E8%B4%B7%E4%BA%A7%E5%93%81%E7%AE%80%E4%BB%8B/" class="md-nav__link">
+        信贷产品简介
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_2" type="checkbox" id="__nav_3_3_2" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_3_2">
+          消费金融产品
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="消费金融产品" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          消费金融产品
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../loan/02-%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/%E8%81%94%E5%90%88%E8%B4%B7%E5%92%8C%E5%8A%A9%E8%B4%B7/" class="md-nav__link">
+        联合贷和助贷
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../loan/02-%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/%E6%94%BF%E5%BA%9C%E8%9E%8D%E8%B5%84%E5%B9%B3%E5%8F%B0/" class="md-nav__link">
+        政府融资平台
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_4">
+          风控监管
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="风控监管" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          风控监管
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../loan/03-%E9%A3%8E%E6%8E%A7%E7%9B%91%E7%AE%A1/%E4%BF%A1%E8%B4%B7%E4%B8%BB%E6%B5%81%E9%A3%8E%E6%8E%A7%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        信贷主流风控模型
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../loan/03-%E9%A3%8E%E6%8E%A7%E7%9B%91%E7%AE%A1/%E5%8F%8D%E6%AC%BA%E8%AF%88/" class="md-nav__link">
+        反欺诈
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../loan/03-%E9%A3%8E%E6%8E%A7%E7%9B%91%E7%AE%A1/%E6%90%AD%E5%BB%BA%E7%94%A8%E6%88%B7%E6%A0%87%E7%AD%BE%E4%BD%93%E7%B3%BB/" class="md-nav__link">
+        搭建用户标签体系
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../loan/03-%E9%A3%8E%E6%8E%A7%E7%9B%91%E7%AE%A1/%E8%B4%B7%E6%AC%BE%E6%8B%A8%E5%A4%87%E7%8E%87%E5%92%8C%E6%8B%A8%E5%A4%87%E8%A6%86%E7%9B%96%E7%8E%87/" class="md-nav__link">
+        贷款拨备率和拨备覆盖率
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../loan/03-%E9%A3%8E%E6%8E%A7%E7%9B%91%E7%AE%A1/Vintage%E3%80%81%E6%BB%9A%E5%8A%A8%E7%8E%87%E5%92%8C%E8%BF%81%E7%A7%BB%E7%8E%87/" class="md-nav__link">
+        Vintage、滚动率和迁移率
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../loan/03-%E9%A3%8E%E6%8E%A7%E7%9B%91%E7%AE%A1/%E6%96%AD%E7%9B%B4%E8%BF%9E/" class="md-nav__link">
+        断直联
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_5">
+          产品设计
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="产品设计" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          产品设计
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../loan/04-%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/%E4%BF%A1%E8%B4%B7%E4%BA%A7%E5%93%81%E5%88%86%E6%9E%90%E8%BF%87%E7%A8%8B/" class="md-nav__link">
+        信贷产品分析过程
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          产品知识
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="产品知识" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          产品知识
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_1">
+          产品思维
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="产品思维" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          产品思维
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../product/%E4%BA%A7%E5%93%81%E6%80%9D%E7%BB%B4%E5%9C%B0%E5%9B%BE/" class="md-nav__link">
+        产品思维地图
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          软件工程
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="软件工程" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          软件工程
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DDD%E4%BB%8B%E7%BB%8D/" class="md-nav__link">
+        DDD介绍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MVC%E5%88%B0DDD%E7%9A%84%E6%9E%B6%E6%9E%84%E6%BC%94%E8%BF%9B/" class="md-nav__link">
+        MVC到DDD的架构演进
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          45个小技巧优化代码
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        45个小技巧优化代码
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1、规范命名
+  </a>
+  
+    <nav class="md-nav" aria-label="1、规范命名">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    见名知意
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    能够读的出来
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2、规范代码格式
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3、写好代码注释
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4try-catch" class="md-nav__link">
+    4、try catch 内部代码抽成一个方法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5、方法别太长
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    6、抽取重复代码
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7return" class="md-nav__link">
+    7、多用return
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8if" class="md-nav__link">
+    8、if条件表达式不要太复杂
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    9、优雅地参数校验
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    10、统一返回值
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    11、统一异常处理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12null" class="md-nav__link">
+    12、尽量不传递null值
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13null" class="md-nav__link">
+    13、尽量不返回null值
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    14、日志打印规范
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    15、统一类库
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    16、尽量使用工具类
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17" class="md-nav__link">
+    17、尽量不要重复造轮子
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18" class="md-nav__link">
+    18、类和方法单一职责
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19" class="md-nav__link">
+    19、尽量使用聚合/组合代替继承
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20" class="md-nav__link">
+    20、使用设计模式优化代码
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    21、不滥用设计模式
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    22、面向接口编程
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    23、经常重构旧的代码
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24null" class="md-nav__link">
+    24、null值判断
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25pojotostring" class="md-nav__link">
+    25、pojo类重写toString方法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26" class="md-nav__link">
+    26、魔法值用常量表示
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27finally" class="md-nav__link">
+    27、资源释放写到finally
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28" class="md-nav__link">
+    28、使用线程池代替手动创建线程
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29" class="md-nav__link">
+    29、线程设置名称
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#30volatile" class="md-nav__link">
+    30、涉及线程间可见性加volatile
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    31、考虑线程安全问题
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    32、慎用异步
+  </a>
+  
+    <nav class="md-nav" aria-label="32、慎用异步">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    事务问题
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cpu" class="md-nav__link">
+    cpu负载过高
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    意想不到的异常
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    33、减小锁的范围
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    34、有类型区分时定义好枚举
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    35、远程接口调用设置超时时间
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#36" class="md-nav__link">
+    36、集合使用应当指明初始化大小
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#37beanutils" class="md-nav__link">
+    37、尽量不要使用BeanUtils来拷贝属性
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#38stringbuilder" class="md-nav__link">
+    38、使用StringBuilder进行字符串拼接
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#39transactional" class="md-nav__link">
+    39、@Transactional应指定回滚的异常类型
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#40" class="md-nav__link">
+    40、谨慎方法内部调用动态代理的方法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#41select" class="md-nav__link">
+    41、需要什么字段select什么字段
+  </a>
+  
+    <nav class="md-nav" aria-label="41、需要什么字段select什么字段">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    增加不必要的字段的网络传输
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    会导致无法使用到覆盖索引
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    42、不循环调用数据库
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43join" class="md-nav__link">
+    43、用业务代码代替多表join
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    44、装上阿里代码检查插件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45" class="md-nav__link">
+    45、及时跟同事沟通
+  </a>
+  
+    <nav class="md-nav" aria-label="45、及时跟同事沟通">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    参考资料：
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    程序汪资料链接
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          编程语言
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="编程语言" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          编程语言
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/java/" class="md-nav__link">
+        Java
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/python/" class="md-nav__link">
+        Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/c-cpp/" class="md-nav__link">
+        C&C++
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/latex/" class="md-nav__link">
+        LaTeX
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          工具软件
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="工具软件" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          工具软件
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1" type="checkbox" id="__nav_7_1" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_7_1">
+          编码工具
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="编码工具" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_1">
+          <span class="md-nav__icon md-icon"></span>
+          编码工具
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/editor/vscode/" class="md-nav__link">
+        VS Code
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/editor/vim/" class="md-nav__link">
+        Vim
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/editor/vim-zen/" class="md-nav__link">
+        Vim之禅
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_2" type="checkbox" id="__nav_7_2" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_7_2">
+          版本控制
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="版本控制" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_2">
+          <span class="md-nav__icon md-icon"></span>
+          版本控制
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/git/" class="md-nav__link">
+        GIT
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_3" type="checkbox" id="__nav_7_3" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_7_3">
+          操作系统
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="操作系统" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_3">
+          <span class="md-nav__icon md-icon"></span>
+          操作系统
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/wsl/" class="md-nav__link">
+        WSL
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1、规范命名
+  </a>
+  
+    <nav class="md-nav" aria-label="1、规范命名">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    见名知意
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    能够读的出来
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2、规范代码格式
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3、写好代码注释
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4try-catch" class="md-nav__link">
+    4、try catch 内部代码抽成一个方法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5、方法别太长
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    6、抽取重复代码
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7return" class="md-nav__link">
+    7、多用return
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8if" class="md-nav__link">
+    8、if条件表达式不要太复杂
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    9、优雅地参数校验
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    10、统一返回值
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    11、统一异常处理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12null" class="md-nav__link">
+    12、尽量不传递null值
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13null" class="md-nav__link">
+    13、尽量不返回null值
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    14、日志打印规范
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    15、统一类库
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    16、尽量使用工具类
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17" class="md-nav__link">
+    17、尽量不要重复造轮子
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18" class="md-nav__link">
+    18、类和方法单一职责
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19" class="md-nav__link">
+    19、尽量使用聚合/组合代替继承
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20" class="md-nav__link">
+    20、使用设计模式优化代码
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    21、不滥用设计模式
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    22、面向接口编程
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    23、经常重构旧的代码
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24null" class="md-nav__link">
+    24、null值判断
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25pojotostring" class="md-nav__link">
+    25、pojo类重写toString方法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26" class="md-nav__link">
+    26、魔法值用常量表示
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27finally" class="md-nav__link">
+    27、资源释放写到finally
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28" class="md-nav__link">
+    28、使用线程池代替手动创建线程
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29" class="md-nav__link">
+    29、线程设置名称
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#30volatile" class="md-nav__link">
+    30、涉及线程间可见性加volatile
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    31、考虑线程安全问题
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    32、慎用异步
+  </a>
+  
+    <nav class="md-nav" aria-label="32、慎用异步">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    事务问题
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cpu" class="md-nav__link">
+    cpu负载过高
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    意想不到的异常
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    33、减小锁的范围
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    34、有类型区分时定义好枚举
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    35、远程接口调用设置超时时间
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#36" class="md-nav__link">
+    36、集合使用应当指明初始化大小
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#37beanutils" class="md-nav__link">
+    37、尽量不要使用BeanUtils来拷贝属性
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#38stringbuilder" class="md-nav__link">
+    38、使用StringBuilder进行字符串拼接
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#39transactional" class="md-nav__link">
+    39、@Transactional应指定回滚的异常类型
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#40" class="md-nav__link">
+    40、谨慎方法内部调用动态代理的方法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#41select" class="md-nav__link">
+    41、需要什么字段select什么字段
+  </a>
+  
+    <nav class="md-nav" aria-label="41、需要什么字段select什么字段">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    增加不必要的字段的网络传输
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    会导致无法使用到覆盖索引
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    42、不循环调用数据库
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43join" class="md-nav__link">
+    43、用业务代码代替多表join
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    44、装上阿里代码检查插件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45" class="md-nav__link">
+    45、及时跟同事沟通
+  </a>
+  
+    <nav class="md-nav" aria-label="45、及时跟同事沟通">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    参考资料：
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    程序汪资料链接
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/shepherddog/wiki/edit/master/docs/enginering/02-编程范式/45个小技巧优化代码.md" title="编辑此页" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+  <h1>45个小技巧优化代码</h1>
+
+<p>本文我就从代码的编写规范，格式的优化，设计原则和一些常见的代码优化的技巧等方面总结了了45个小技巧分享给大家，如果不足，欢迎指正。</p>
+<p><img alt="图片" src="../images/45-ways-1.png" /></p>
+<h2 id="1">1、规范命名<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<p>命名是写代码中最频繁的操作，比如类、属性、方法、参数等。好的名字应当能遵循以下几点：</p>
+<h6 id="_1">见名知意<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h6>
+<p>比如需要定义一个变量需要来计数</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+名称 i 没有任何的实际意义，没有体现出数量的意思，所以我们应当指明数量的名称</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h6 id="_2">能够读的出来<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h6>
+<p>如下代码：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">sfzh</span><span class="p">;</span><span class="w">   </span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">dhhm</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>这些变量的名称，根本读不出来，更别说实际意义了。</p>
+<p>所以我们可以使用正确的可以读出来的英文来命名</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">idCardNo</span><span class="p">;</span><span class="w">   </span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">phone</span><span class="p">;</span><span class="w">   </span>
+</code></pre></div>
+<h2 id="2">2、规范代码格式<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<p>好的代码格式能够让人感觉看起来代码更加舒适。</p>
+<p>好的代码格式应当遵守以下几点：</p>
+<ul>
+<li>合适的空格</li>
+<li>代码对齐，比如大括号要对齐</li>
+<li>及时换行，一行不要写太多代码</li>
+</ul>
+<p>好在现在开发工具支持一键格式化，可以帮助美化代码格式。</p>
+<h2 id="3">3、写好代码注释<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<p>在《代码简洁之道》这本书中作者提到了一个观点，注释的恰当用法是用来弥补我们在用代码表达意图时的失败。换句话说，当无法通过读代码来了解代码所表达的意思的时候，就需要用注释来说明。</p>
+<p>作者之所以这么说，是因为作者觉得随着时间的推移，代码可能会变动，如果不及时更新注释，那么注释就容易产生误导，偏离代码的实际意义。而不及时更新注释的原因是，程序员不喜欢写注释。（作者很懂啊）</p>
+<p>但是这不意味着可以不写注释，当通过代码如果无法表达意思的时候，就需要注释，比如如下代码</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Integer</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">ids</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">       </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">             </span><span class="k">continue</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">        </span><span class="p">}</span><span class="w">       </span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="c1">//做其他事</span><span class="w"></span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="p">}</span><span class="w"> </span>
+</code></pre></div>
+<p>为什么 id == 0 需要跳过，代码是无法看出来了，就需要注释了。</p>
+<p>好的注释应当满足一下几点：</p>
+<ul>
+<li>
+<p>解释代码的意图，说明为什么这么写，用来做什么</p>
+</li>
+<li>
+<p>对参数和返回值注释，入参代表什么，出参代表什么</p>
+</li>
+<li>
+<p>有警示作用，比如说入参不能为空，或者代码是不是有坑</p>
+</li>
+<li>
+<p>当代码还未完成时可以使用 todo 注释来注释</p>
+</li>
+</ul>
+<h2 id="4try-catch">4、try catch 内部代码抽成一个方法<a class="headerlink" href="#4try-catch" title="Permanent link">&para;</a></h2>
+<p>try catch代码有时会干扰我们阅读核心的代码逻辑，这时就可以把try catch内部主逻辑抽离成一个单独的方法</p>
+<p>如下图是Eureka服务端源码中服务下线的实现中的一段代码</p>
+<p><img alt="图片" src="../images/45-ways-2.png" /></p>
+<p>整个方法非常长，try中代码是真正的服务下线的代码实现，finally可以保证读锁最终一定可以释放。</p>
+<p>所以这段代码其实就可以对核心的逻辑进行抽取。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">protected</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">internalCancel</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">appName</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">isReplication</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">       </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">                  </span><span class="n">read</span><span class="p">.</span><span class="na">lock</span><span class="p">();</span><span class="w">           </span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">                  </span><span class="n">doInternalCancel</span><span class="p">(</span><span class="n">appName</span><span class="p">,</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">isReplication</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">           </span><span class="p">}</span><span class="w"> </span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">       </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">                  </span><span class="n">read</span><span class="p">.</span><span class="na">unlock</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">           </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">       </span><span class="c1">// 剩余代码</span><span class="w"></span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">       </span><span class="p">}</span><span class="w">      </span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">       </span><span class="kd">private</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">doInternalCancel</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">appName</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">isReplication</span><span class="p">)</span><span class="w">  </span><span class="p">{</span><span class="w">       </span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">       </span><span class="c1">//真正处理下线的逻辑   </span><span class="w"></span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">       </span><span class="p">}</span><span class="w">    </span>
+</code></pre></div>
+<h2 id="5">5、方法别太长<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
+<p>方法别太长就是字面的意思。一旦代码太长，给人的第一眼感觉就很复杂，让人不想读下去；同时方法太长的代码可能读起来容易让人摸不着头脑，不知道哪一些代码是同一个业务的功能。</p>
+<p>我曾经就遇到过一个方法写了2000+行，各种if else判断，我光理清代码思路就用了很久，最终理清之后，就用策略模式给重构了。</p>
+<p>所以一旦方法过长，可以尝试将相同业务功能的代码单独抽取一个方法，最后在主方法中调用即可。</p>
+<h2 id="6">6、抽取重复代码<a class="headerlink" href="#6" title="Permanent link">&para;</a></h2>
+<p>当一份代码重复出现在程序的多处地方，就会造成程序又臭又长，当这份代码的结构要修改时，每一处出现这份代码的地方都得修改，导致程序的扩展性很差。</p>
+<p>所以一般遇到这种情况，可以抽取成一个工具类，还可以抽成一个公共的父类。</p>
+<h2 id="7return">7、多用return<a class="headerlink" href="#7return" title="Permanent link">&para;</a></h2>
+<p>在有时我们平时写代码的情况可能会出现if条件套if的情况，当if条件过多的时候可能会出现如下情况：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">条件1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">条件2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">条件3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">条件4</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">条件5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">                    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;三友的java日记&quot;</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">                </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">            </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>面对这种情况，可以换种思路，使用return来优化
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">条件1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">       </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="p">}</span><span class="w">   </span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">条件2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">       </span><span class="k">return</span><span class="p">;</span><span class="w">   </span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="p">}</span><span class="w">   </span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">条件3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">       </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="p">}</span><span class="w">   </span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">条件4</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">       </span><span class="k">return</span><span class="p">;</span><span class="w"> </span>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="p">}</span><span class="w">   </span>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">条件5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">       </span><span class="k">return</span><span class="p">;</span><span class="w"> </span>
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="p">}</span><span class="w">      </span>
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;三友的java日记&quot;</span><span class="p">);</span><span class="w"> </span>
+</code></pre></div></p>
+<p>这样优化就感觉看起来更加直观</p>
+<h2 id="8if">8、if条件表达式不要太复杂<a class="headerlink" href="#8if" title="Permanent link">&para;</a></h2>
+<p>比如在如下代码：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">if</span><span class="w"> </span><span class="p">(((</span><span class="n">StringUtils</span><span class="p">.</span><span class="na">isBlank</span><span class="p">(</span><span class="n">person</span><span class="p">.</span><span class="na">getName</span><span class="p">())</span><span class="w"></span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">        </span><span class="o">||</span><span class="w"> </span><span class="s">&quot;三友的java日记&quot;</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">person</span><span class="p">.</span><span class="na">getName</span><span class="p">()))</span><span class="w"></span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">        </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">person</span><span class="p">.</span><span class="na">getAge</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">person</span><span class="p">.</span><span class="na">getAge</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">10</span><span class="p">))</span><span class="w"></span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">        </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="s">&quot;汉&quot;</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">person</span><span class="p">.</span><span class="na">getNational</span><span class="p">()))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">    </span><span class="c1">// 处理逻辑</span><span class="w"></span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>这段逻辑，这种条件表达式乍一看不知道是什么，仔细一看还是不知道是什么，这时就可以这么优化</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kt">boolean</span><span class="w"> </span><span class="n">sanyouOrBlank</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">isBlank</span><span class="p">(</span><span class="n">person</span><span class="p">.</span><span class="na">getName</span><span class="p">())</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot;三友的java日记&quot;</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">person</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span><span class="w"></span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="kt">boolean</span><span class="w"> </span><span class="n">ageGreaterThanTen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">person</span><span class="p">.</span><span class="na">getAge</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">person</span><span class="p">.</span><span class="na">getAge</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="kt">boolean</span><span class="w"> </span><span class="n">isHanNational</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;汉&quot;</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">person</span><span class="p">.</span><span class="na">getNational</span><span class="p">());</span><span class="w"></span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">sanyouOrBlank</span><span class="w"></span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">    </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">ageGreaterThanTen</span><span class="w"></span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">    </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">isHanNational</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">    </span><span class="c1">// 处理逻辑</span><span class="w"></span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>此时就很容易看懂if的逻辑了</p>
+<h2 id="9">9、优雅地参数校验<a class="headerlink" href="#9" title="Permanent link">&para;</a></h2>
+<p>当前端传递给后端参数的时候，通常需要对参数进场检验，一般可能会这么写</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nd">@PostMapping</span><span class="w"></span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">addPerson</span><span class="p">(</span><span class="nd">@RequestBody</span><span class="w"> </span><span class="n">AddPersonRequest</span><span class="w"> </span><span class="n">addPersonRequest</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">StringUtils</span><span class="p">.</span><span class="na">isBlank</span><span class="p">(</span><span class="n">addPersonRequest</span><span class="p">.</span><span class="na">getName</span><span class="p">()))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BizException</span><span class="p">(</span><span class="s">&quot;人员姓名不能为空&quot;</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">StringUtils</span><span class="p">.</span><span class="na">isBlank</span><span class="p">(</span><span class="n">addPersonRequest</span><span class="p">.</span><span class="na">getIdCardNo</span><span class="p">()))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BizException</span><span class="p">(</span><span class="s">&quot;身份证号不能为空&quot;</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">    </span><span class="c1">// 处理新增逻辑</span><span class="w"></span>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>这种写虽然可以，但是当字段的多的时候，光校验就占据了很长的代码，不够优雅。</p>
+<p>针对参数校验这个问题，有第三方库已经封装好了，比如hibernate-validator框架，只需要拿来用即可。</p>
+<p>所以就在实体类上加<a class="magiclink magiclink-github magiclink-mention" href="https://github.com/NotBlank" title="GitHub User: NotBlank">@NotBlank</a>、@NotNull注解来进行校验</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nd">@Data</span><span class="w"></span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="nd">@ToString</span><span class="w"></span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="kd">private</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AddPersonRequest</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">    </span><span class="nd">@NotBlank</span><span class="p">(</span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;人员姓名不能为空&quot;</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">    </span><span class="nd">@NotBlank</span><span class="p">(</span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;身份证号不能为空&quot;</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">idCardNo</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w">    </span><span class="c1">//忽略</span><span class="w"></span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>此时Controller接口就需要方法上就需要加上@Valid注解</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nd">@PostMapping</span><span class="w"></span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">addPerson</span><span class="p">(</span><span class="nd">@RequestBody</span><span class="w"> </span><span class="nd">@Valid</span><span class="w"> </span><span class="n">AddPersonRequest</span><span class="w"> </span><span class="n">addPersonRequest</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="c1">// 处理新增逻辑</span><span class="w"></span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h2 id="10">10、统一返回值<a class="headerlink" href="#10" title="Permanent link">&para;</a></h2>
+<p>后端在设计接口的时候，需要统一返回值</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="p">{</span><span class="w">  </span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="s">&quot;code&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="s">&quot;message&quot;</span><span class="p">:</span><span class="s">&quot;成功&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">    </span><span class="s">&quot;data&quot;</span><span class="p">:</span><span class="s">&quot;返回数据&quot;</span><span class="w"></span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>不仅是给前端参数，也包括提供给第三方的接口等，这样接口调用方法可以按照固定的格式解析代码，不用进行判断。如果不一样，相信我，前端半夜都一定会来找你。</p>
+<p>Spring中很多方法可以做到统一返回值，而不用每个方法都返回，比如基于AOP，或者可以自定义HandlerMethodReturnValueHandler来实现统一返回值。</p>
+<h2 id="11">11、统一异常处理<a class="headerlink" href="#11" title="Permanent link">&para;</a></h2>
+<p>当你没有统一异常处理的时候，那么所有的接口避免不了try catch操作。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nd">@GetMapping</span><span class="p">(</span><span class="s">&quot;/{id}&quot;</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="kd">public</span><span class="w"> </span><span class="n">Result</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">selectPerson</span><span class="p">(</span><span class="nd">@PathVariable</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">)</span><span class="w"> </span><span class="n">Long</span><span class="w"> </span><span class="n">personId</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">        </span><span class="n">PersonVO</span><span class="w"> </span><span class="n">vo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">personService</span><span class="p">.</span><span class="na">selectById</span><span class="p">(</span><span class="n">personId</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">Result</span><span class="p">.</span><span class="na">success</span><span class="p">(</span><span class="n">vo</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="w">        </span><span class="c1">//打印日志</span><span class="w"></span>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">Result</span><span class="p">.</span><span class="na">error</span><span class="p">(</span><span class="s">&quot;系统异常&quot;</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>每个接口都得这么玩，那不得满屏的try catch。</p>
+<p>所以可以基于Spring提供的统一异常处理机制来完成。</p>
+<h2 id="12null">12、尽量不传递null值<a class="headerlink" href="#12null" title="Permanent link">&para;</a></h2>
+<p>这个很好理解，不传null值可以避免方法不支持为null入参时产生的空指针问题。</p>
+<p>当然为了更好的表明该方法是不是可以传null值，可以通过@NonNull和@Nullable注解来标记。@NonNull就表示不能传null值，@Nullable就是可以传null值。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c1">//示例1</span><span class="w"></span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">updatePerson</span><span class="p">(</span><span class="nd">@Nullable</span><span class="w"> </span><span class="n">Person</span><span class="w"> </span><span class="n">person</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">person</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="w">    </span><span class="n">personService</span><span class="p">.</span><span class="na">updateById</span><span class="p">(</span><span class="n">person</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="c1">//示例2</span><span class="w"></span>
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">updatePerson</span><span class="p">(</span><span class="nd">@NonNull</span><span class="w"> </span><span class="n">Person</span><span class="w"> </span><span class="n">person</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="w">    </span><span class="n">personService</span><span class="p">.</span><span class="na">updateById</span><span class="p">(</span><span class="n">person</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h2 id="13null">13、尽量不返回null值<a class="headerlink" href="#13null" title="Permanent link">&para;</a></h2>
+<p>尽量不返回null值是为了减少调用者对返回值的为null判断，如果无法避免返回null值，可以通过返回Optional来代替null值。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kd">public</span><span class="w"> </span><span class="n">Optional</span><span class="o">&lt;</span><span class="n">Person</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">getPersonById</span><span class="p">(</span><span class="n">Long</span><span class="w"> </span><span class="n">personId</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">Optional</span><span class="p">.</span><span class="na">ofNullable</span><span class="p">(</span><span class="n">personService</span><span class="p">.</span><span class="na">selectById</span><span class="p">(</span><span class="n">personId</span><span class="p">));</span><span class="w"></span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>如果不想这么写，也可以通过@NonNull和@Nullable表示方法会不会返回null值。</p>
+<h2 id="14">14、日志打印规范<a class="headerlink" href="#14" title="Permanent link">&para;</a></h2>
+<p>好的日志打印能帮助我们快速定位问题</p>
+<p>好的日志应该遵循以下几点：</p>
+<ul>
+<li>
+<p>可搜索性，要有明确的关键字信息</p>
+</li>
+<li>
+<p>异常日志需要打印出堆栈信息</p>
+</li>
+<li>
+<p>合适的日志级别，比如异常使用error，正常使用info</p>
+</li>
+<li>
+<p>日志内容太大不打印，比如有时需要将图片转成Base64，那么这个Base64就可以不用打印</p>
+</li>
+</ul>
+<h2 id="15">15、统一类库<a class="headerlink" href="#15" title="Permanent link">&para;</a></h2>
+<p>在一个项目中，可能会由于引入的依赖不同导致引入了很多相似功能的类库，比如常见的json类库，又或者是一些常用的工具类，当遇到这种情况下，应当规范在项目中到底应该使用什么类库，而不是一会用Fastjson，一会使用Gson。</p>
+<h2 id="16">16、尽量使用工具类<a class="headerlink" href="#16" title="Permanent link">&para;</a></h2>
+<p>比如在对集合判空的时候，可以这么写</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">updatePersons</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">Person</span><span class="o">&gt;</span><span class="w"> </span><span class="n">persons</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">persons</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">persons</span><span class="p">.</span><span class="na">size</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>但是一般不推荐这么写，可以通过一些判断的工具类来写</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">updatePersons</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">Person</span><span class="o">&gt;</span><span class="w"> </span><span class="n">persons</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">CollectionUtils</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">(</span><span class="n">persons</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>不仅集合，比如字符串的判断等等，就使用工具类，不要手动判断。</p>
+<h2 id="17">17、尽量不要重复造轮子<a class="headerlink" href="#17" title="Permanent link">&para;</a></h2>
+<p>就拿格式化日期来来说，我们一般封装成一个工具类来调用，比如如下代码</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">SimpleDateFormat</span><span class="w"> </span><span class="n">DATE_TIME_FORMAT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SimpleDateFormat</span><span class="p">(</span><span class="s">&quot;yyyy-MM-dd HH:mm:ss&quot;</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">formatDateTime</span><span class="p">(</span><span class="n">Date</span><span class="w"> </span><span class="n">date</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">DATE_TIME_FORMAT</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="n">date</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>这段代码看似没啥问题，但是却忽略了SimpleDateFormat是个线程不安全的类，所以这就会引起坑。</p>
+<p>一般对于这种已经有开源的项目并且已经做得很好的时候，比如Hutool，就可以把轮子直接拿过来用了。</p>
+<h2 id="18">18、类和方法单一职责<a class="headerlink" href="#18" title="Permanent link">&para;</a></h2>
+<p>单一职责原则是设计模式的七大设计原则之一，它的核心意思就是字面的意思，一个类或者一个方法只做单一的功能。</p>
+<p>就拿Nacos来说，在Nacos1.x的版本中，有这么一个接口HttpAgent</p>
+<p><img alt="图片" src="../images/45-ways-3.png" /></p>
+<p>这个类只干了一件事，那就是封装http请求参数，向Nacos服务端发送请求，接收响应，这其实就是单一职责原则的体现。</p>
+<p>当其它的地方需要向Nacos服务端发送请求时，只需要通过这个接口的实现，传入参数就可以发送请求了，而不需要关心如何携带服务端鉴权参数、http请求参数如何组装等问题。</p>
+<h2 id="19">19、尽量使用聚合/组合代替继承<a class="headerlink" href="#19" title="Permanent link">&para;</a></h2>
+<p>继承的弊端：</p>
+<ul>
+<li>灵活性低。java语言是单继承的，无法同时继承很多类，并且继承容易导致代码层次太深，不易于维护</li>
+<li>耦合性高。一旦父类的代码修改，可能会影响到子类的行为</li>
+</ul>
+<p>所以一般推荐使用聚合/组合代替继承。</p>
+<p>聚合/组合的意思就是通过成员变量的方式来使用类。</p>
+<p>比如说，OrderService需要使用UserService，可以注入一个UserService而非通过继承UserService。</p>
+<p>聚合和组合的区别就是，组合是当对象一创建的时候，就直接给属性赋值，而聚合的方式可以通过set方式来设置。</p>
+<p>组合：
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">OrderService</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">UserService</span><span class="w"> </span><span class="n">userService</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">UserService</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="p">}</span><span class="w">    </span>
+</code></pre></div></p>
+<p>聚合：
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">OrderService</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">UserService</span><span class="w"> </span><span class="n">userService</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setUserService</span><span class="p">(</span><span class="n">UserService</span><span class="w"> </span><span class="n">userService</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">userService</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">userService</span><span class="p">;</span><span class="w">       </span>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="w">    </span><span class="p">}</span><span class="w">   </span>
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="p">}</span><span class="w"> </span>
+</code></pre></div></p>
+<h2 id="20">20、使用设计模式优化代码<a class="headerlink" href="#20" title="Permanent link">&para;</a></h2>
+<p>在平时开发中，使用设计模式可以增加代码的扩展性。</p>
+<p>比如说，当你需要做一个可以根据不同的平台做不同消息推送的功能时，就可以使用策略模式的方式来优化。</p>
+<p>设计一个接口：
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">MessageNotifier</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="w">    </span><span class="cm">/**</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="cm">     * 是否支持改类型的通知的方式</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="cm">     *</span>
+<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a><span class="cm">     * @param type 0:短信 1:app</span>
+<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="cm">     * @return</span>
+<a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a><span class="cm">     */</span><span class="w"></span>
+<a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a><span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">support</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">type</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a>
+<a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a><span class="w">    </span><span class="cm">/**</span>
+<a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a><span class="cm">     * 通知</span>
+<a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a><span class="cm">     *</span>
+<a id="__codelineno-22-14" name="__codelineno-22-14" href="#__codelineno-22-14"></a><span class="cm">     * @param user</span>
+<a id="__codelineno-22-15" name="__codelineno-22-15" href="#__codelineno-22-15"></a><span class="cm">     * @param content</span>
+<a id="__codelineno-22-16" name="__codelineno-22-16" href="#__codelineno-22-16"></a><span class="cm">     */</span><span class="w"></span>
+<a id="__codelineno-22-17" name="__codelineno-22-17" href="#__codelineno-22-17"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">notify</span><span class="p">(</span><span class="n">User</span><span class="w"> </span><span class="n">user</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">content</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-22-18" name="__codelineno-22-18" href="#__codelineno-22-18"></a>
+<a id="__codelineno-22-19" name="__codelineno-22-19" href="#__codelineno-22-19"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div></p>
+<p>短信通知实现：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="nd">@Component</span><span class="w"></span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SMSMessageNotifier</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">MessageNotifier</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w">    </span><span class="nd">@Override</span><span class="w"></span>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">support</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">type</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>
+<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a><span class="w">    </span><span class="nd">@Override</span><span class="w"></span>
+<a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">notify</span><span class="p">(</span><span class="n">User</span><span class="w"> </span><span class="n">user</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">content</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a><span class="w">        </span><span class="c1">//调用短信通知的api发送短信</span><span class="w"></span>
+<a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-23-12" name="__codelineno-23-12" href="#__codelineno-23-12"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>app通知实现：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AppMessageNotifier</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">MessageNotifier</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="w">    </span><span class="nd">@Override</span><span class="w"></span>
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">support</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">type</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>
+<a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a><span class="w">    </span><span class="nd">@Override</span><span class="w"></span>
+<a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">notify</span><span class="p">(</span><span class="n">User</span><span class="w"> </span><span class="n">user</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">content</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a><span class="w">       </span><span class="c1">//调用通知app通知的api</span><span class="w"></span>
+<a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-24-11" name="__codelineno-24-11" href="#__codelineno-24-11"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>最后提供一个方法，当需要进行消息通知时，调用notifyMessage，传入相应的参数就行。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="nd">@Resource</span><span class="w"></span>
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="kd">private</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">MessageNotifier</span><span class="o">&gt;</span><span class="w"> </span><span class="n">messageNotifiers</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">notifyMessage</span><span class="p">(</span><span class="n">User</span><span class="w"> </span><span class="n">user</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">content</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">notifyType</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">MessageNotifier</span><span class="w"> </span><span class="n">messageNotifier</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">messageNotifiers</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">messageNotifier</span><span class="p">.</span><span class="na">support</span><span class="p">(</span><span class="n">notifyType</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a><span class="w">            </span><span class="n">messageNotifier</span><span class="p">.</span><span class="na">notify</span><span class="p">(</span><span class="n">user</span><span class="p">,</span><span class="w"> </span><span class="n">content</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-25-10" name="__codelineno-25-10" href="#__codelineno-25-10"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>假设此时需要支持通过邮件通知，只需要有对应实现就行。</p>
+<h2 id="21">21、不滥用设计模式<a class="headerlink" href="#21" title="Permanent link">&para;</a></h2>
+<p>用好设计模式可以增加代码的扩展性，但是滥用设计模式确是不可取的。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">printPerson</span><span class="p">(</span><span class="n">Person</span><span class="w"> </span><span class="n">person</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="w">    </span><span class="n">StringBuilder</span><span class="w"> </span><span class="n">sb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StringBuilder</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">StringUtils</span><span class="p">.</span><span class="na">isNotBlank</span><span class="p">(</span><span class="n">person</span><span class="p">.</span><span class="na">getName</span><span class="p">()))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="w">        </span><span class="n">sb</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="s">&quot;姓名:&quot;</span><span class="p">).</span><span class="na">append</span><span class="p">(</span><span class="n">person</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span><span class="w"></span>
+<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">StringUtils</span><span class="p">.</span><span class="na">isNotBlank</span><span class="p">(</span><span class="n">person</span><span class="p">.</span><span class="na">getIdCardNo</span><span class="p">()))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a><span class="w">        </span><span class="n">sb</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="s">&quot;身份证号:&quot;</span><span class="p">).</span><span class="na">append</span><span class="p">(</span><span class="n">person</span><span class="p">.</span><span class="na">getIdCardNo</span><span class="p">());</span><span class="w"></span>
+<a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-26-9" name="__codelineno-26-9" href="#__codelineno-26-9"></a>
+<a id="__codelineno-26-10" name="__codelineno-26-10" href="#__codelineno-26-10"></a><span class="w">    </span><span class="c1">// 省略</span><span class="w"></span>
+<a id="__codelineno-26-11" name="__codelineno-26-11" href="#__codelineno-26-11"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">sb</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span><span class="w"></span>
+<a id="__codelineno-26-12" name="__codelineno-26-12" href="#__codelineno-26-12"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>比如上面打印Person信息的代码，用if判断就能够做到效果，你说我要不用责任链或者什么设计模式来优化一下吧，没必要。</p>
+<h2 id="22">22、面向接口编程<a class="headerlink" href="#22" title="Permanent link">&para;</a></h2>
+<p>在一些可替换的场景中，应该引用父类或者抽象，而非实现。</p>
+<p>举个例子，在实际项目中可能需要对一些图片进行存储，但是存储的方式很多，比如可以选择阿里云的OSS，又或者是七牛云，存储服务器等等。所以对于存储图片这个功能来说，这些具体的实现是可以相互替换的。</p>
+<p>所以在项目中，我们不应当在代码中耦合一个具体的实现，而是可以提供一个存储接口</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">FileStorage</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="nf">store</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">fileName</span><span class="p">,</span><span class="w"> </span><span class="kt">byte</span><span class="o">[]</span><span class="w"> </span><span class="n">bytes</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>如果选择了阿里云OSS作为存储服务器，那么就可以基于OSS实现一个FileStorage，在项目中哪里需要存储的时候，只要实现注入这个接口就可以了。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="nd">@Autowired</span><span class="w"></span>
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="kd">private</span><span class="w"> </span><span class="n">FileStorage</span><span class="w"> </span><span class="n">fileStorage</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>假设用了一段时间之后，发现阿里云的OSS比较贵，此时想换成七牛云的，那么此时只需要基于七牛云的接口实现FileStorage接口，然后注入到IOC，那么原有代码用到FileStorage根本不需要动，实现轻松的替换。</p>
+<h2 id="23">23、经常重构旧的代码<a class="headerlink" href="#23" title="Permanent link">&para;</a></h2>
+<p>随着时间的推移，业务的增长，有的代码可能不再适用，或者有了更好的设计方式，那么可以及时的重构业务代码。</p>
+<p>就拿上面的消息通知为例，在业务刚开始的时候可能只支持短信通知，于是在代码中就直接耦合了短信通知的代码。但是随着业务的增长，逐渐需要支持app、邮件之类的通知，那么此时就可以重构以前的代码，抽出一个策略接口，进行代码优化。</p>
+<h2 id="24null">24、null值判断<a class="headerlink" href="#24null" title="Permanent link">&para;</a></h2>
+<p>空指针是代码开发中的一个难题，作为程序员的基本修改，应该要防止空指针。</p>
+<p>可能产生空指针的原因：</p>
+<ul>
+<li>数据返回对象为null</li>
+<li>自动拆箱导致空指针</li>
+<li>rpc调用返回的对象可能为空格</li>
+</ul>
+<p>所以在需要这些的时候，需要强制判断是否为null。前面也提到可以使用Optional来优雅地进行null值判断。</p>
+<h2 id="25pojotostring">25、pojo类重写toString方法<a class="headerlink" href="#25pojotostring" title="Permanent link">&para;</a></h2>
+<p>pojo一般内部都有很多属性，重写toString方法可以方便在打印或者测试的时候查看内部的属性。</p>
+<h2 id="26">26、魔法值用常量表示<a class="headerlink" href="#26" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">sayHello</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">province</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;广东省&quot;</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">province</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;靓仔~~&quot;</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;帅哥~~&quot;</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>代码里，广东省就是一个魔法值，那么就可以将用一个常量来保存</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">GUANG_DONG_PROVINCE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;广东省&quot;</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">sayHello</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">province</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">GUANG_DONG_PROVINCE</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">province</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;靓仔~~&quot;</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;帅哥~~&quot;</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-30-8" name="__codelineno-30-8" href="#__codelineno-30-8"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-30-9" name="__codelineno-30-9" href="#__codelineno-30-9"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h2 id="27finally">27、资源释放写到finally<a class="headerlink" href="#27finally" title="Permanent link">&para;</a></h2>
+<p>比如在使用一个api类锁或者进行IO操作的时候，需要主动写代码需释放资源，为了能够保证资源能够被真正释放，那么就需要在finally中写代码保证资源释放。</p>
+<p><img alt="图片" src="../images/45-ways-4.png" /></p>
+<p>如图所示，就是CopyOnWriteArrayList的add方法的实现，最终是在finally中进行锁的释放。</p>
+<h2 id="28">28、使用线程池代替手动创建线程<a class="headerlink" href="#28" title="Permanent link">&para;</a></h2>
+<p>使用线程池还有以下好处：</p>
+<ul>
+<li>降低资源消耗。通过重复利用已创建的线程降低线程创建和销毁造成的消耗。</li>
+<li>提高响应速度。当任务到达时，任务可以不需要的等到线程创建就能立即执行。</li>
+<li>提高线程的可管理性。线程是稀缺资源，如果无限制的创建，不仅会消耗系统资源，还会降低系统 的稳定性，使用线程池可以进行统一的分配，调优和监控。</li>
+</ul>
+<p>所以为了达到更好的利用资源，提高响应速度，就可以使用线程池的方式来代替手动创建线程。</p>
+<p>如果对线程池不清楚的同学，可以看一下这篇文章:7000字+24张图带你彻底弄懂线程池</p>
+<h2 id="29">29、线程设置名称<a class="headerlink" href="#29" title="Permanent link">&para;</a></h2>
+<p>在日志打印的时候，日志是可以把线程的名字给打印出来。</p>
+<p><img alt="图片" src="../images/45-ways-5.png" /></p>
+<p>如上图，日志打印出来的就是tom猫的线程。</p>
+<p>所以，设置线程的名称可以帮助我们更好的知道代码是通过哪个线程执行的，更容易排查问题。</p>
+<h2 id="30volatile">30、涉及线程间可见性加volatile<a class="headerlink" href="#30volatile" title="Permanent link">&para;</a></h2>
+<p>在RocketMQ源码中有这么一段代码</p>
+<p><img alt="图片" src="../images/45-ways-6.png" /></p>
+<p>在消费者在从服务端拉取消息的时候，会单独开一个线程，执行while循环，只要stopped状态一直为false，那么就会一直循环下去，线程就一直会运行下去，拉取消息。</p>
+<p>当消费者客户端关闭的时候，就会将stopped状态设置为true，告诉拉取消息的线程需要停止了。但是由于并发编程中存在可见性的问题，所以虽然客户端关闭线程将stopped状态设置为true，但是拉取消息的线程可能看不见，不能及时感知到数据的修改，还是认为stopped状态设置为false，那么就还会运行下去。</p>
+<p>针对这种可见性的问题，java提供了一个volatile关键字来保证线程间的可见性。</p>
+<p><img alt="图片" src="../images/45-ways-7.png" /></p>
+<p>所以，源码中就加了volatile关键字。</p>
+<p>加了volatile关键字之后，一旦客户端的线程将stopped状态设置为true时候，拉取消息的线程就能立马知道stopped已经是false了，那么再次执行while条件判断的时候，就不成立，线程就运行结束了，然后退出。</p>
+<h2 id="31">31、考虑线程安全问题<a class="headerlink" href="#31" title="Permanent link">&para;</a></h2>
+<p>在平时开发中，有时需要考虑并发安全的问题。</p>
+<p>举个例子来说，一般在调用第三方接口的时候，可能会有一个鉴权的机制，一般会携带一个请求头token参数过去，而token也是调用第三方接口返回的，一般这种token都会有个过期时间，比如24小时。</p>
+<p>我们一般会将token缓存到Redis中，设置一个过期时间。向第三方发送请求时，会直接从缓存中查找，但是当从Redis中获取不到token的时候，我们都会重新请求token接口，获取token，然后再设置到缓存中。</p>
+<p>整个过程看起来是没什么问题，但是实则隐藏线程安全问题。</p>
+<p>假设当出现并发的时候，同时来两个线程AB从缓存查找，发现没有，那么AB此时就会同时调用token获取接口。假设A先获取到token，B后获取到token，但是由于CPU调度问题，线程B虽然后获取到token，但是先往Redis存数据，而线程A后存，覆盖了B请求的token。</p>
+<p>这下就会出现大问题，最新的token被覆盖了，那么之后一定时间内token都是无效的，接口就请求不通。</p>
+<p>针对这种问题，可以使用double check机制来优化获取token的问题。</p>
+<p>所以，在实际中，需要多考虑考虑业务是否有线程安全问题，有集合读写安全问题，那么就用线程安全的集合，业务有安全的问题，那么就可以通过加锁的手段来解决。</p>
+<h2 id="32">32、慎用异步<a class="headerlink" href="#32" title="Permanent link">&para;</a></h2>
+<p>虽然在使用多线程可以帮助我们提高接口的响应速度，但是也会带来很多问题。</p>
+<h5 id="_3">事务问题<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h5>
+<p>一旦使用了异步，就会导致两个线程不是同一个事务的，导致异常之后无法正常回滚数据。</p>
+<h5 id="cpu">cpu负载过高<a class="headerlink" href="#cpu" title="Permanent link">&para;</a></h5>
+<p>之前有个小伙伴遇到需要同时处理几万调数据的需求，每条数据都需要调用很多次接口，为了达到老板期望的时间要求，使用了多线程跑，开了很多线程，此时会发现系统的cpu会飙升</p>
+<h5 id="_4">意想不到的异常<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h5>
+<p>还是上面的提到的例子，在测试的时候就发现，由于并发量激增，在请求第三方接口的时候，返回了很多错误信息，导致有的数据没有处理成功。</p>
+<p>虽然说慎用异步，但不代表不用，如果可以保证事务的问题，或是CPU负载不会高的话，那么还是可以使用的。</p>
+<h2 id="33">33、减小锁的范围<a class="headerlink" href="#33" title="Permanent link">&para;</a></h2>
+<p>减小锁的范围就是给需要加锁的代码加锁，不需要加锁的代码不要加锁。这样就能减少加锁的时间，从而可以较少锁互斥的时间，提高效率。</p>
+<p><img alt="图片" src="../images/45-ways-8.png" /></p>
+<p>比如CopyOnWriteArrayList的addAll方法的实现，lock.lock(); 代码完全可以放到代码的第一行，但是作者并没有，因为前面判断的代码不会有线程安全的问题，不放到加锁代码中可以减少锁抢占和占有的时间。</p>
+<h2 id="34">34、有类型区分时定义好枚举<a class="headerlink" href="#34" title="Permanent link">&para;</a></h2>
+<p>比如在项目中不同的类型的业务可能需要上传各种各样的附件，此时就可以定义好不同的一个附件的枚举，来区分不同业务的附件。</p>
+<p>不要在代码中直接写死，不定义枚举，代码阅读起来非常困难，直接看到数字都是懵逼的。。</p>
+<h2 id="35">35、远程接口调用设置超时时间<a class="headerlink" href="#35" title="Permanent link">&para;</a></h2>
+<p>比如在进行微服务之间进行rpc调用的时候，又或者在调用第三方提供的接口的时候，需要设置超时时间，防止因为各种原因，导致线程”卡死“在那。</p>
+<p>我以前就遇到过线上就遇到过这种问题。当时的业务是订阅kafka的消息，然后向第三方上传数据。在某个周末，突然就接到电话，说数据无法上传了，通过排查线上的服务器才发现所有的线程都线程”卡死“了，最后定位到代码才发现原来是没有设置超时时间。</p>
+<h2 id="36">36、集合使用应当指明初始化大小<a class="headerlink" href="#36" title="Permanent link">&para;</a></h2>
+<p>比如在写代码的时候，经常会用到List、Map来临时存储数据，其中最常用的就是ArrayList和HashMap。但是用不好可能也会导致性能的问题。</p>
+<p>比如说，在ArrayList中，底层是基于数组来存储的，数组是一旦确定大小是无法再改变容量的。但不断的往ArrayList中存储数据的时候，总有那么一刻会导致数组的容量满了，无法再存储其它元素，此时就需要对数组扩容。所谓的扩容就是新创建一个容量是原来1.5倍的数组，将原有的数据给拷贝到新的数组上，然后用新的数组替代原来的数组。</p>
+<p>在扩容的过程中，由于涉及到数组的拷贝，就会导致性能消耗；同时HashMap也会由于扩容的问题，消耗性能。所以在使用这类集合时可以在构造的时候指定集合的容量大小。</p>
+<h2 id="37beanutils">37、尽量不要使用BeanUtils来拷贝属性<a class="headerlink" href="#37beanutils" title="Permanent link">&para;</a></h2>
+<p>在开发中经常需要对JavaBean进行转换，但是又不想一个一个手动set，比较麻烦，所以一般会使用属性拷贝的一些工具，比如说Spring提供的BeanUtils来拷贝。不得不说，使用BeanUtils来拷贝属性是真的舒服，使用一行代码可以代替几行甚至十几行代码，我也喜欢用。</p>
+<p>但是喜欢归喜欢，但是会带来性能问题，因为底层是通过反射来的拷贝属性的，所以尽量不要用BeanUtils来拷贝属性。</p>
+<p>比如你可以装个JavaBean转换的插件，帮你自动生成转换代码；又或者可以使用性能更高的MapStruct来进行JavaBean转换，MapStruct底层是通过调用（settter/getter）来实现的，而不是反射来快速执行。</p>
+<h2 id="38stringbuilder">38、使用StringBuilder进行字符串拼接<a class="headerlink" href="#38stringbuilder" title="Permanent link">&para;</a></h2>
+<p>如下代码：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="n">String</span><span class="w"> </span><span class="n">str1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;123&quot;</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="n">String</span><span class="w"> </span><span class="n">str2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;456&quot;</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="n">String</span><span class="w"> </span><span class="n">str3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;789&quot;</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a><span class="n">String</span><span class="w"> </span><span class="n">str4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">str2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">str3</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>使用 + 拼接字符串的时候，会创建一个StringBuilder，然后将要拼接的字符串追加到StringBuilder，再toString，这样如果多次拼接就会执行很多次的创建StringBuilder，z执行toString的操作。</p>
+<p>所以可以手动通过StringBuilder拼接，这样只会创建一次StringBuilder，效率更高。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="n">StringBuilder</span><span class="w"> </span><span class="n">sb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StringBuilder</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sb</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="s">&quot;123&quot;</span><span class="p">).</span><span class="na">append</span><span class="p">(</span><span class="s">&quot;456&quot;</span><span class="p">).</span><span class="na">append</span><span class="p">(</span><span class="s">&quot;789&quot;</span><span class="p">).</span><span class="na">toString</span><span class="p">();</span><span class="w"></span>
+</code></pre></div>
+<h2 id="39transactional">39、@Transactional应指定回滚的异常类型<a class="headerlink" href="#39transactional" title="Permanent link">&para;</a></h2>
+<p>平时在写代码的时候需要通过rollbackFor显示指定需要对什么异常回滚，原因在这：</p>
+<p><img alt="图片" src="../images/45-ways-9.png" /></p>
+<p>默认是只能回滚RuntimeException和Error异常，所以需要手动指定，比如指定成Expection等。</p>
+<h2 id="40">40、谨慎方法内部调用动态代理的方法<a class="headerlink" href="#40" title="Permanent link">&para;</a></h2>
+<p>如下事务代码</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="nd">@Service</span><span class="w"></span>
+<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">PersonService</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>
+<a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="n">Person</span><span class="w"> </span><span class="n">person</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a><span class="w">        </span><span class="c1">// 处理</span><span class="w"></span>
+<a id="__codelineno-33-6" name="__codelineno-33-6" href="#__codelineno-33-6"></a><span class="w">        </span><span class="n">updatePerson</span><span class="p">(</span><span class="n">person</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-33-7" name="__codelineno-33-7" href="#__codelineno-33-7"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-33-8" name="__codelineno-33-8" href="#__codelineno-33-8"></a>
+<a id="__codelineno-33-9" name="__codelineno-33-9" href="#__codelineno-33-9"></a><span class="w">    </span><span class="nd">@Transactional</span><span class="p">(</span><span class="n">rollbackFor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Exception</span><span class="p">.</span><span class="na">class</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-33-10" name="__codelineno-33-10" href="#__codelineno-33-10"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">updatePerson</span><span class="p">(</span><span class="n">Person</span><span class="w"> </span><span class="n">person</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-33-11" name="__codelineno-33-11" href="#__codelineno-33-11"></a><span class="w">        </span><span class="c1">// 处理</span><span class="w"></span>
+<a id="__codelineno-33-12" name="__codelineno-33-12" href="#__codelineno-33-12"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-33-13" name="__codelineno-33-13" href="#__codelineno-33-13"></a>
+<a id="__codelineno-33-14" name="__codelineno-33-14" href="#__codelineno-33-14"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>update调用了加了@Transactional注解的updatePerson方法，那么此时updatePerson的事务就是失效。</p>
+<p>其实失效的原因不是事务的锅，是由AOP机制决定的，因为事务是基于AOP实现的。AOP是基于对象的代理，当内部方法调用时，走的不是动态代理对象的方法，而是原有对象的方法调用，如此就走不到动态代理的代码，就会失效了。</p>
+<p>如果实在需要让动态代理生效，可以注入自己的代理对象</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="nd">@Service</span><span class="w"></span>
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">PersonService</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a>
+<a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a><span class="w">    </span><span class="nd">@Autowired</span><span class="w"></span>
+<a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">PersonService</span><span class="w"> </span><span class="n">personService</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-34-6" name="__codelineno-34-6" href="#__codelineno-34-6"></a>
+<a id="__codelineno-34-7" name="__codelineno-34-7" href="#__codelineno-34-7"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="n">Person</span><span class="w"> </span><span class="n">person</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-34-8" name="__codelineno-34-8" href="#__codelineno-34-8"></a><span class="w">        </span><span class="c1">// 处理</span><span class="w"></span>
+<a id="__codelineno-34-9" name="__codelineno-34-9" href="#__codelineno-34-9"></a><span class="w">        </span><span class="n">personService</span><span class="p">.</span><span class="na">updatePerson</span><span class="p">(</span><span class="n">person</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-34-10" name="__codelineno-34-10" href="#__codelineno-34-10"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-34-11" name="__codelineno-34-11" href="#__codelineno-34-11"></a>
+<a id="__codelineno-34-12" name="__codelineno-34-12" href="#__codelineno-34-12"></a><span class="w">    </span><span class="nd">@Transactional</span><span class="p">(</span><span class="n">rollbackFor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Exception</span><span class="p">.</span><span class="na">class</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-34-13" name="__codelineno-34-13" href="#__codelineno-34-13"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">updatePerson</span><span class="p">(</span><span class="n">Person</span><span class="w"> </span><span class="n">person</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-34-14" name="__codelineno-34-14" href="#__codelineno-34-14"></a><span class="w">        </span><span class="c1">// 处理</span><span class="w"></span>
+<a id="__codelineno-34-15" name="__codelineno-34-15" href="#__codelineno-34-15"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-34-16" name="__codelineno-34-16" href="#__codelineno-34-16"></a>
+<a id="__codelineno-34-17" name="__codelineno-34-17" href="#__codelineno-34-17"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h2 id="41select">41、需要什么字段select什么字段<a class="headerlink" href="#41select" title="Permanent link">&para;</a></h2>
+<p>查询全字段有以下几点坏处：</p>
+<h6 id="_5">增加不必要的字段的网络传输<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h6>
+<p>比如有些文本的字段，存储的数据非常长，但是本次业务使用不到，但是如果查了就会把这个数据返回给客户端，增加了网络传输的负担</p>
+<h6 id="_6">会导致无法使用到覆盖索引<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h6>
+<p>比如说，现在有身份证号和姓名做了联合索引，现在只需要根据身份证号查询姓名，如果直接select name 的话，那么在遍历索引的时候，发现要查询的字段在索引中已经存在，那么此时就会直接从索引中将name字段的数据查出来，返回，而不会继续去查找聚簇索引，减少回表的操作。</p>
+<p>所以建议是需要使用什么字段查询什么字段。比如mp也支持在构建查询条件的时候，查询某个具体的字段。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="w"> </span><span class="n">Wrappers</span><span class="p">.</span><span class="na">query</span><span class="p">().</span><span class="na">select</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<h2 id="42">42、不循环调用数据库<a class="headerlink" href="#42" title="Permanent link">&para;</a></h2>
+<p>不要在循环中访问数据库，这样会严重影响数据库性能。</p>
+<p>比如需要查询一批人员的信息，人员的信息存在基本信息表和扩展表中，错误的代码如下：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="kd">public</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">PersonVO</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">selectPersons</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">Long</span><span class="o">&gt;</span><span class="w"> </span><span class="n">personIds</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a><span class="w">    </span><span class="n">List</span><span class="o">&lt;</span><span class="n">PersonVO</span><span class="o">&gt;</span><span class="w"> </span><span class="n">persons</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">personIds</span><span class="p">.</span><span class="na">size</span><span class="p">());</span><span class="w"></span>
+<a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a><span class="w">    </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Person</span><span class="o">&gt;</span><span class="w"> </span><span class="n">personList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">personMapper</span><span class="p">.</span><span class="na">selectByIds</span><span class="p">(</span><span class="n">personIds</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Person</span><span class="w"> </span><span class="n">person</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">personList</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a><span class="w">        </span><span class="n">PersonVO</span><span class="w"> </span><span class="n">vo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PersonVO</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-36-6" name="__codelineno-36-6" href="#__codelineno-36-6"></a><span class="w">        </span><span class="n">PersonExt</span><span class="w"> </span><span class="n">personExt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">personExtMapper</span><span class="p">.</span><span class="na">selectById</span><span class="p">(</span><span class="n">person</span><span class="p">.</span><span class="na">getId</span><span class="p">());</span><span class="w"></span>
+<a id="__codelineno-36-7" name="__codelineno-36-7" href="#__codelineno-36-7"></a><span class="w">        </span><span class="c1">// 组装数据</span><span class="w"></span>
+<a id="__codelineno-36-8" name="__codelineno-36-8" href="#__codelineno-36-8"></a><span class="w">        </span><span class="n">persons</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">vo</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-36-9" name="__codelineno-36-9" href="#__codelineno-36-9"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-36-10" name="__codelineno-36-10" href="#__codelineno-36-10"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">persons</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-36-11" name="__codelineno-36-11" href="#__codelineno-36-11"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>遍历每个人员的基本信息，去数据库查找。</p>
+<p>正确的方法应该先批量查出来，然后转成map：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="kd">public</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">PersonVO</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">selectPersons</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">Long</span><span class="o">&gt;</span><span class="w"> </span><span class="n">personIds</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a><span class="w">    </span><span class="n">List</span><span class="o">&lt;</span><span class="n">PersonVO</span><span class="o">&gt;</span><span class="w"> </span><span class="n">persons</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">personIds</span><span class="p">.</span><span class="na">size</span><span class="p">());</span><span class="w"></span>
+<a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a><span class="w">    </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Person</span><span class="o">&gt;</span><span class="w"> </span><span class="n">personList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">personMapper</span><span class="p">.</span><span class="na">selectByIds</span><span class="p">(</span><span class="n">personIds</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a><span class="w">        </span><span class="c1">//批量查询，转换成Map</span><span class="w"></span>
+<a id="__codelineno-37-5" name="__codelineno-37-5" href="#__codelineno-37-5"></a><span class="w">    </span><span class="n">List</span><span class="o">&lt;</span><span class="n">PersonExt</span><span class="o">&gt;</span><span class="w"> </span><span class="n">personExtList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">personExtMapper</span><span class="p">.</span><span class="na">selectByIds</span><span class="p">(</span><span class="n">person</span><span class="p">.</span><span class="na">getId</span><span class="p">());</span><span class="w"></span>
+<a id="__codelineno-37-6" name="__codelineno-37-6" href="#__codelineno-37-6"></a><span class="w">    </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">PersonExt</span><span class="o">&gt;</span><span class="w"> </span><span class="n">personExtMap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">personExtList</span><span class="p">.</span><span class="na">stream</span><span class="p">().</span><span class="na">collect</span><span class="p">(</span><span class="n">Collectors</span><span class="p">.</span><span class="na">toMap</span><span class="p">(</span><span class="n">PersonExt</span><span class="p">::</span><span class="n">getPersonId</span><span class="p">,</span><span class="w"> </span><span class="n">Function</span><span class="p">.</span><span class="na">identity</span><span class="p">()));</span><span class="w"></span>
+<a id="__codelineno-37-7" name="__codelineno-37-7" href="#__codelineno-37-7"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Person</span><span class="w"> </span><span class="n">person</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">personList</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-37-8" name="__codelineno-37-8" href="#__codelineno-37-8"></a><span class="w">        </span><span class="n">PersonVO</span><span class="w"> </span><span class="n">vo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PersonVO</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-37-9" name="__codelineno-37-9" href="#__codelineno-37-9"></a><span class="w">        </span><span class="c1">//直接从Map中查找</span><span class="w"></span>
+<a id="__codelineno-37-10" name="__codelineno-37-10" href="#__codelineno-37-10"></a><span class="w">        </span><span class="n">PersonExt</span><span class="w"> </span><span class="n">personExt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">personExtMap</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">person</span><span class="p">.</span><span class="na">getId</span><span class="p">());</span><span class="w"></span>
+<a id="__codelineno-37-11" name="__codelineno-37-11" href="#__codelineno-37-11"></a><span class="w">        </span><span class="c1">// 组装数据</span><span class="w"></span>
+<a id="__codelineno-37-12" name="__codelineno-37-12" href="#__codelineno-37-12"></a><span class="w">        </span><span class="n">persons</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">vo</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-37-13" name="__codelineno-37-13" href="#__codelineno-37-13"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-37-14" name="__codelineno-37-14" href="#__codelineno-37-14"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">persons</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-37-15" name="__codelineno-37-15" href="#__codelineno-37-15"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h2 id="43join">43、用业务代码代替多表join<a class="headerlink" href="#43join" title="Permanent link">&para;</a></h2>
+<p>如上面代码所示，原本也可以将两张表根据人员的id进行关联查询。但是不推荐这么，阿里也禁止多表join的操作</p>
+<p><img alt="图片" src="../images/45-ways-10.png" /></p>
+<p>而之所以会禁用，是因为join的效率比较低。</p>
+<p>MySQL是使用了嵌套循环的方式来实现关联查询的，也就是for循环会套for循环的意思。用第一张表做外循环，第二张表做内循环，外循环的每一条记录跟内循环中的记录作比较，符合条件的就输出，这种效率肯定低。</p>
+<h2 id="44">44、装上阿里代码检查插件<a class="headerlink" href="#44" title="Permanent link">&para;</a></h2>
+<p>我们平时写代码由于各种因为，比如什么领导啊，项目经理啊，会一直催进度，导致写代码都来不及思考，怎么快怎么来，cv大法上线，虽然有心想写好代码，但是手确不听使唤。所以我建议装一个阿里的代码规范插件，如果有代码不规范，会有提醒，这样就可以知道哪些是可以优化的了。</p>
+<p><img alt="图片" src="../images/45-ways-11.png" /></p>
+<p>如果你有强迫症，相信我，装了这款插件，你的代码会写的很漂亮。</p>
+<h2 id="45">45、及时跟同事沟通<a class="headerlink" href="#45" title="Permanent link">&para;</a></h2>
+<p>写代码的时候不能闭门造车，及时跟同事沟通，比如刚进入一个新的项目的，对项目工程不熟悉，一些技术方案不了解，如果上来就直接写代码，很有可能就会踩坑。</p>
+<h4 id="_7">参考资料：<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<p>《代码简洁之道》</p>
+<p>《阿里巴巴Java开发手册》</p>
+<p>如何写出让人抓狂的代码？</p>
+<h2 id="_8">程序汪资料链接<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzA4NzQ0Njc4Ng==&amp;mid=2247501524&amp;idx=1&amp;sn=2cb28e7b64ab77c55bcc1a172b82a2ad&amp;chksm=903bc2b9a74c4baf5737cd430560ee3c5a357bb37864257a05a72e3cccf41db5bd221ccc63d8&amp;scene=21#wechat_redirect">程序汪接的7个私活都在这里，经验整理</a></p>
+<p><a href="http://mp.weixin.qq.com/s?__biz=Mzg2ODU0NTA2Mw==&amp;mid=2247488419&amp;idx=2&amp;sn=0b80c7f9f73fca89b91e257a269cfada&amp;chksm=ceabf4ebf9dc7dfdaa605a9bb92d31c9fc0a10a7a94351234181a89ba5800672c6e7da2ebfbe&amp;scene=21#wechat_redirect"><strong>Java项目分享  最新整理全集，找项目不累啦 07版</strong></a></p>
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzA4NzQ0Njc4Ng==&amp;mid=2247494170&amp;idx=1&amp;sn=5181a5277946be31478b1b9425c93f63&amp;chksm=903bee77a74c67614b2772248e8b5e912d323bfe42a0e576dd157a4752f5fed88d6b439ec52f&amp;scene=21#wechat_redirect"><strong>堪称神级的Spring Boot手册，从基础入门到实战进阶</strong></a></p>
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzA4NzQ0Njc4Ng==&amp;mid=2247492941&amp;idx=1&amp;sn=2ff31fec735d7c5d6f3483c346d5ca69&amp;chksm=903be120a74c68361fd9afad178e7338315041a2cd4459f2165a8faa20e995a3477af3eda2bb&amp;scene=21#wechat_redirect"><strong>卧槽！字节跳动《算法中文手册》火了，完整版 PDF 开放下载！</strong></a></p>
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzA4NzQ0Njc4Ng==&amp;mid=2247496297&amp;idx=2&amp;sn=d253dda2160821262d9f6fc1a9a637d0&amp;chksm=903bf604a74c7f126ab936e374a1f22b9b7cb26a7964b6cc837c3f73af516139064e522a1294&amp;scene=21#wechat_redirect"><strong>卧槽！阿里大佬总结的《图解Java》火了，完整版PDF开放下载！</strong></a></p>
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzA4NzQ0Njc4Ng==&amp;mid=2247490715&amp;idx=2&amp;sn=7f2c5de11bebaecfbaf1ce4b945a4d6f&amp;chksm=903818f6a74f91e0fde557b75bd44adfd5d378612f682aa3eef6766927aebb9e5afc72c91a9e&amp;scene=21#wechat_redirect"><strong>字节跳动总结的设计模式 PDF 火了，完整版开放下载！</strong></a></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            回到页面顶部
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="页脚" >
+      
+        
+        <a href="../MVC%E5%88%B0DDD%E7%9A%84%E6%9E%B6%E6%9E%84%E6%BC%94%E8%BF%9B/" class="md-footer__link md-footer__link--prev" aria-label="上一页: MVC到DDD的架构演进" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              MVC到DDD的架构演进
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../03-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/java/" class="md-footer__link md-footer__link--next" aria-label="下一页: Java" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              Java
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2016 - 2022 Zhimin Bai
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.tooltips", "navigation.indexes", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+    
+  </body>
+</html>

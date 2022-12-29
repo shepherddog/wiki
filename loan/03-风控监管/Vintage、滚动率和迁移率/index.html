@@ -1,0 +1,2102 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="个人知识整合站点，提供有趣又实用的金融、产品知识以及其他有帮助的内容。">
+      
+      
+        <meta name="author" content="Zhimin Bai">
+      
+      
+        <link rel="canonical" href="https://shepherddog.github.io/wiki/loan/03-%E9%A3%8E%E6%8E%A7%E7%9B%91%E7%AE%A1/Vintage%E3%80%81%E6%BB%9A%E5%8A%A8%E7%8E%87%E5%92%8C%E8%BF%81%E7%A7%BB%E7%8E%87/">
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>Vintage、滚动率和迁移率 - ZM-Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,700,700i%7CFira+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Fira Sans";--md-code-font:"Fira Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#part-1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="ZM-Wiki" class="md-header__button md-logo" aria-label="ZM-Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ZM-Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Vintage、滚动率和迁移率
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/shepherddog/wiki/" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    shepherddog/wiki
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        简介
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../finance/01-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/%E9%87%91%E8%9E%8D%E7%9B%91%E7%AE%A1%E4%BD%93%E7%B3%BB/" class="md-tabs__link">
+        金融知识
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../01-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/%E4%BF%A1%E8%B4%B7%E9%A2%86%E5%9F%9F%E7%AE%80%E4%BB%8B/" class="md-tabs__link md-tabs__link--active">
+        信贷领域
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../product/%E4%BA%A7%E5%93%81%E6%80%9D%E7%BB%B4%E5%9C%B0%E5%9B%BE/" class="md-tabs__link">
+        产品知识
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../enginering/02-%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F/DDD%E4%BB%8B%E7%BB%8D/" class="md-tabs__link">
+        软件工程
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../enginering/03-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/java/" class="md-tabs__link">
+        编程语言
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../tools/editor/vscode/" class="md-tabs__link">
+        工具软件
+      </a>
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="ZM-Wiki" class="md-nav__button md-logo" aria-label="ZM-Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    ZM-Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/shepherddog/wiki/" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    shepherddog/wiki
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../..">简介</a>
+          
+            <label for="__nav_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="简介" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          简介
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intro/faq/" class="md-nav__link">
+        F.A.Q.
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          金融知识
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="金融知识" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          金融知识
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          基础概念
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="基础概念" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          基础概念
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../finance/01-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/%E9%87%91%E8%9E%8D%E7%9B%91%E7%AE%A1%E4%BD%93%E7%B3%BB/" class="md-nav__link">
+        金融监管体系
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../finance/01-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/%E9%87%91%E8%9E%8D%E6%9C%BA%E6%9E%84%E7%9A%84%E5%88%92%E5%88%86/" class="md-nav__link">
+        金融机构的划分
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../finance/01-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/%E9%87%91%E8%9E%8D%E7%9A%844%E4%B8%AA%E5%85%B3%E9%94%AE%E8%A6%81%E7%B4%A0/" class="md-nav__link">
+        金融的4个关键要素
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../finance/01-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/%E9%93%B6%E8%A1%8C%E8%BF%90%E4%BD%9C%E7%AE%80%E4%BB%8B/" class="md-nav__link">
+        银行运作简介
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          支付行业
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="支付行业" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          支付行业
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../finance/03-%E6%94%AF%E4%BB%98%E9%A2%86%E5%9F%9F/%E6%94%AF%E4%BB%98%E8%A1%8C%E4%B8%9A%E7%AE%80%E4%BB%8B/" class="md-nav__link">
+        支付行业简介
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          信贷领域
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="信贷领域" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          信贷领域
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/%E4%BF%A1%E8%B4%B7%E9%A2%86%E5%9F%9F%E7%AE%80%E4%BB%8B/" class="md-nav__link">
+        信贷领域简介
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          基础概念
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="基础概念" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          基础概念
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/%E8%BF%98%E6%AC%BE%E6%96%B9%E5%BC%8F/" class="md-nav__link">
+        还款方式介绍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/%E5%88%A9%E7%8E%87/" class="md-nav__link">
+        利率介绍
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_3">
+          产品介绍
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="产品介绍" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          产品介绍
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/%E4%BF%A1%E8%B4%B7%E4%BA%A7%E5%93%81%E7%AE%80%E4%BB%8B/" class="md-nav__link">
+        信贷产品简介
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_2" type="checkbox" id="__nav_3_3_2" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_3_2">
+          消费金融产品
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="消费金融产品" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          消费金融产品
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/%E8%81%94%E5%90%88%E8%B4%B7%E5%92%8C%E5%8A%A9%E8%B4%B7/" class="md-nav__link">
+        联合贷和助贷
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/%E6%94%BF%E5%BA%9C%E8%9E%8D%E8%B5%84%E5%B9%B3%E5%8F%B0/" class="md-nav__link">
+        政府融资平台
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_4">
+          风控监管
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="风控监管" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          风控监管
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E4%BF%A1%E8%B4%B7%E4%B8%BB%E6%B5%81%E9%A3%8E%E6%8E%A7%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        信贷主流风控模型
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%8F%8D%E6%AC%BA%E8%AF%88/" class="md-nav__link">
+        反欺诈
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%90%AD%E5%BB%BA%E7%94%A8%E6%88%B7%E6%A0%87%E7%AD%BE%E4%BD%93%E7%B3%BB/" class="md-nav__link">
+        搭建用户标签体系
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%B4%B7%E6%AC%BE%E6%8B%A8%E5%A4%87%E7%8E%87%E5%92%8C%E6%8B%A8%E5%A4%87%E8%A6%86%E7%9B%96%E7%8E%87/" class="md-nav__link">
+        贷款拨备率和拨备覆盖率
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Vintage、滚动率和迁移率
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Vintage、滚动率和迁移率
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#part-1" class="md-nav__link">
+    Part 1. 基础风控指标概念
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-vintage-analysis" class="md-nav__link">
+    Part 2. Vintage Analysis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3-roll-rate-analysis" class="md-nav__link">
+    Part 3. Roll Rate Analysis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-4-y" class="md-nav__link">
+    Part 4. 如何确定目标变量Y
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-5-flow-rate-analysis" class="md-nav__link">
+    Part 5. Flow Rate Analysis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-6" class="md-nav__link">
+    Part 6. 坏账准备金的计算
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-7" class="md-nav__link">
+    Part 7. 总结
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    参考资料
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%96%AD%E7%9B%B4%E8%BF%9E/" class="md-nav__link">
+        断直联
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_5">
+          产品设计
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="产品设计" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          产品设计
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/%E4%BF%A1%E8%B4%B7%E4%BA%A7%E5%93%81%E5%88%86%E6%9E%90%E8%BF%87%E7%A8%8B/" class="md-nav__link">
+        信贷产品分析过程
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          产品知识
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="产品知识" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          产品知识
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_1">
+          产品思维
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="产品思维" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          产品思维
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../product/%E4%BA%A7%E5%93%81%E6%80%9D%E7%BB%B4%E5%9C%B0%E5%9B%BE/" class="md-nav__link">
+        产品思维地图
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          软件工程
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="软件工程" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          软件工程
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../enginering/02-%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F/DDD%E4%BB%8B%E7%BB%8D/" class="md-nav__link">
+        DDD介绍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../enginering/02-%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F/MVC%E5%88%B0DDD%E7%9A%84%E6%9E%B6%E6%9E%84%E6%BC%94%E8%BF%9B/" class="md-nav__link">
+        MVC到DDD的架构演进
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../enginering/02-%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F/45%E4%B8%AA%E5%B0%8F%E6%8A%80%E5%B7%A7%E4%BC%98%E5%8C%96%E4%BB%A3%E7%A0%81/" class="md-nav__link">
+        45个小技巧优化代码
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          编程语言
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="编程语言" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          编程语言
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../enginering/03-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/java/" class="md-nav__link">
+        Java
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../enginering/03-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/python/" class="md-nav__link">
+        Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../enginering/03-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/c-cpp/" class="md-nav__link">
+        C&C++
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../enginering/03-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/latex/" class="md-nav__link">
+        LaTeX
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          工具软件
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="工具软件" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          工具软件
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1" type="checkbox" id="__nav_7_1" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_7_1">
+          编码工具
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="编码工具" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_1">
+          <span class="md-nav__icon md-icon"></span>
+          编码工具
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/editor/vscode/" class="md-nav__link">
+        VS Code
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/editor/vim/" class="md-nav__link">
+        Vim
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/editor/vim-zen/" class="md-nav__link">
+        Vim之禅
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_2" type="checkbox" id="__nav_7_2" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_7_2">
+          版本控制
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="版本控制" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_2">
+          <span class="md-nav__icon md-icon"></span>
+          版本控制
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/git/" class="md-nav__link">
+        GIT
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_3" type="checkbox" id="__nav_7_3" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_7_3">
+          操作系统
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="操作系统" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_3">
+          <span class="md-nav__icon md-icon"></span>
+          操作系统
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/wsl/" class="md-nav__link">
+        WSL
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#part-1" class="md-nav__link">
+    Part 1. 基础风控指标概念
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-vintage-analysis" class="md-nav__link">
+    Part 2. Vintage Analysis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3-roll-rate-analysis" class="md-nav__link">
+    Part 3. Roll Rate Analysis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-4-y" class="md-nav__link">
+    Part 4. 如何确定目标变量Y
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-5-flow-rate-analysis" class="md-nav__link">
+    Part 5. Flow Rate Analysis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-6" class="md-nav__link">
+    Part 6. 坏账准备金的计算
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-7" class="md-nav__link">
+    Part 7. 总结
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    参考资料
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/shepherddog/wiki/edit/master/docs/loan/03-风控监管/Vintage、滚动率和迁移率.md" title="编辑此页" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+  <h1>Vintage、滚动率和迁移率</h1>
+
+<details class="note" open="open">
+<summary>Note</summary>
+<p>信贷风险管理是一门艺术，更是一门科学。资产质量分析中常会涉及到三个理论：</p>
+<ul>
+<li>账龄分析（Vintage Analysis）：用以分析账户成熟期、变化规律等。</li>
+<li>滚动率分析（Roll Rate Analysis）：用以定义账户好坏程度。</li>
+<li>迁移率分析（Flow Rate Analysis）：用以分析不同逾期状态之间的转化率。</li>
+</ul>
+<p>本文基于《金融风控研究院-Vintage、滚动率和迁移率》，力求系统介绍这三者的概念、计算逻辑和业务应用，希望能对大家有所帮助。</p>
+</details>
+<h2 id="part-1"><strong>Part 1.</strong> 基础风控指标概念<a class="headerlink" href="#part-1" title="Permanent link">&para;</a></h2>
+<p>为了更容易理解后续内容，我们先介绍一些基础的风控指标概念。</p>
+<p><strong>定义一：账龄(Month on Book，MOB)</strong></p>
+<p>指**资产放款月份**。类似于婴孩一出生就有了年龄，一旦申贷订单被放款，也便拥有了账龄和生命周期。</p>
+<ul>
+<li>MOB0：放款日至当月月底</li>
+<li>MOB1：放款后第二个完整的月份</li>
+<li>MOB2：放款后第三个完整的月份</li>
+</ul>
+<p><strong>MOB的最大值取决于信贷产品期限</strong>。如果是12期产品，那么该资产的生命周期是12期，MOB最大到MOB12。</p>
+<p>例如，2019年11月13日放款的订单，2019年11月是MOB0，2019年12月是MOB1，以此类推。</p>
+<p><strong>定义二：逾期天数(Days Past Due，DPD)</strong></p>
+<p><strong>逾期天数 = 实际还款日 - 应还款日。</strong></p>
+<p>DPDN+表示逾期天数 &gt;= N天，如DPD30+表逾期天数 &gt;=30天的资产</p>
+<p>例如，若还款日是每月8号，那么9号就是逾期第一天。如果客户在10号还款，那么逾期2天。</p>
+<p><strong>定义三：逾期期数(M)</strong></p>
+<p><strong>指实际还款日与应还款日之间的逾期天数，并按区间划分后的逾期状态。</strong> M取自Month on Book的第一个单词。（注：不同机构所定义的区间划分可能存在差异）</p>
+<ul>
+<li>M0：当前未逾期（或用C表示，取自Current）</li>
+<li>M1： 逾期1-30日</li>
+<li>M2：逾期31-60日</li>
+<li>M3：逾期61-90日</li>
+<li>M4：逾期91-120日</li>
+<li>M5：逾期121-150日</li>
+<li>M6：逾期151-180日</li>
+<li>M7：逾期180日以上。此时也被称为*呆账*（Bad Debts），会予以注销账户（write-off）</li>
+</ul>
+<h2 id="part-2-vintage-analysis"><strong>Part 2. Vintage Analysis</strong><a class="headerlink" href="#part-2-vintage-analysis" title="Permanent link">&para;</a></h2>
+<p>Vintage一词最初来源于葡萄酒业 。由于每年采摘的葡萄会受到日照、气温、降水等因素的影响，最终酿造的葡萄酒品质会存在差异。在窖藏一定年份后，葡萄酒的品质将趋于稳定，也就是品质成熟，这段年份数被称为*成熟期* （maturity）。</p>
+<p>简便起见，我们以酒精浓度作为衡量葡萄酒品质的标准，约定：浓度越高，品质越好。首先，记录入窖年份作为该批次葡萄酒的标签，这也被称为Vintage或者Cohort。之后，我们将每年定期抽样测量酒精浓度，保存记录数据，如图1所示。</p>
+<p>经过几年的数据积累，我们就可以绘制出酒精浓度随时间变化的Vintage曲线。俗话说，酒越酿越醇，Vintage曲线通常是*单调递增*的，如图1所示。</p>
+<p><img alt="" src="../images/Pasted%20image%2020221201144844.png" /></p>
+<p>图 1 - 葡萄酒的Vintage曲线</p>
+<p>我们可以利用Vintage曲线做什么呢？如图2所示，主要用途包括：</p>
+<ol>
+<li><strong>分析变化规律</strong>：评估不同年份的葡萄酒的品质随着窖藏时间推移的变化规律。某些年份的葡萄酒浓度在入窖第1年就能达到较高的水平，但上升缓慢；有些起点低，但上升快 。</li>
+<li><strong>确定最终品质</strong>：Vintage曲线最终稳定值，表明了这批葡萄酒的最终酒精浓度 。</li>
+<li><strong>确定成熟期</strong>：由图1可知，在入窖第6年后，酒精浓度稳定不变，可以确定成熟期是6年，我们最早在第6年就可以开桶品尝 。</li>
+<li><strong>分析影响因素</strong>：根据Vintage曲线特征，我们可以分析某个年份的葡萄所受到的环境影响因素，从而改善生产工艺。比如，由于某一年的光照不充分，糖分积累少，酒精浓度可能最终就比较低。我们就可以人工增加光照强度 。</li>
+</ol>
+<p><img alt="" src="../images/Pasted%20image%2020221201144902.png" /></p>
+<p>图 2 - 葡萄酒的Vintage分析</p>
+<p>在信贷领域中，我们也可以用Vintage曲线分析*资产*（portfolio）质量的成熟过程变化规律。为更容易理解，在此列举了Vintage分析过程中两个领域的对应关系，如图3所示。</p>
+<p><img alt="" src="../images/Pasted%20image%2020221201144916.png" /></p>
+<p>图 3 - 葡萄酒和信贷行业的Vintage对比</p>
+<p>遵循同样的分析思路，按账龄（MOB）长短对齐后比较，我们可以了解同一产品不同时期放款的资产质量。</p>
+<ol>
+<li><strong>确定资产质量</strong>：一般以逾期率来定义资产质量，也就是曲线平缓后对应的逾期率。</li>
+<li><strong>分析变化规律</strong>：资产质量（例如逾期率指标）的变化情况，如果前几期逾期率上升很快，那么说明短期风险没有捕捉住，欺诈风险较高；反之，如果曲线一直在上升，说明信用风险识别能力不佳。</li>
+<li><strong>确定账户成熟期</strong>：用来判断客户展现好坏的时间因素，从而帮助定义表现期。</li>
+<li><strong>分析影响因素</strong>：风控策略收紧或放松、客群变化、市场环境、政策法规等都会影响资产质量。分析影响因素，可以用来指导风控策略的调整。</li>
+</ol>
+<p>求知的你肯定会疑惑，如果以逾期率来定义资产质量，那么逾期风险（目标变量Y）是如何定义的？如何确定M3，还是M6？ 稍安勿躁，后续将会结合滚动率分析来揭晓谜底。</p>
+<p>首先，我们来分析为什么要确定账户的表现期？在《<a href="https://zhuanlan.zhihu.com/p/85440355">风控特征—时间滑窗统计特征体系</a>》一文中，我们提到过：</p>
+<blockquote>
+<p>表现期越长，信用风险暴露将越彻底，但意味着观察期离当前越远，用以提取样本特征的历史数据将越陈旧，建模样本和未来样本的差异也越大。反之，表现期越短，风险还未暴露完全，但好处是能用到更近的样本。</p>
+</blockquote>
+<p><img alt="" src="../images/Pasted%20image%2020221201145203.png" /></p>
+<p>图 4 - 观察点、观察期与表现期</p>
+<p>例如，对于一个12期分期还款的信贷产品，理论上当用户在12期结束，并还清所有的钱后，我们才能定义为绝对的好客户；反之，我们只能说到目前为止是一个好客户，但并不能知道未来几期用户会不会逾期不还钱。</p>
+<p>因此，我们需要确定一个合适的表现期能覆盖足够多的坏客户即可。</p>
+<p><img alt="" src="../images/Pasted%20image%2020221201145150.png" /></p>
+<p>图 5 - 某12期信贷产品2018年的Vintage曲线</p>
+<p>根据图5的信贷产品Vintage曲线，我们可以得到哪些信息呢？</p>
+<ol>
+<li>账龄最长为12个月，代表**产品期限为12期**。随着12期结束，账户的生命周期走到尽头。</li>
+<li>账龄MOB1、MOB2、MOB3的逾期率都为0，说明**逾期指标为M4+（逾期超过90天）风险。**</li>
+<li>由放贷月份从2018年1月～12月的账户的最终逾期率都在降低，说明**资产质量在不断提升**，可能是因为风控水平在不断提升。</li>
+<li>2018年5月相对于2018年1～4月的逾期率大幅度下降，说明该阶段风控策略提升明显。</li>
+<li>不同月份放款的M4+在经过9个MOB后开始趋于稳定，说明**账户成熟期是9个月**。</li>
+</ol>
+<p>绘制Vintage曲线时，就不得不提到纵坐标中逾期率的定义。通常有两种计算口径：</p>
+<ul>
+<li>第一种，订单口径，逾期率 = 逾期订单数 / 总放贷订单数</li>
+<li>第二种，金额口径，逾期率 = 逾期剩余本金 / 总放贷本金</li>
+</ul>
+<p>目前互联网金融各家机构的**口径定义存在差异**，因此仅仅根据各家发布的Vintage曲线，有时并不能客观分析资产质量和风控水平。</p>
+<p>计算逻辑详见：《<a href="https://zhuanlan.zhihu.com/p/163206686">求是汪在路上：Vintage分析表计算过程详解</a>》</p>
+<h2 id="part-3-roll-rate-analysis"><strong>Part 3. Roll Rate Analysis</strong><a class="headerlink" href="#part-3-roll-rate-analysis" title="Permanent link">&para;</a></h2>
+<p>滚动率分析就是从某个观察点之前的一段时间（观察期）的最坏的状态，向观察点之后的一段时间（表现期）的最坏的状态的发展变化情况，如图6所示。</p>
+<p>⚠️注意：一般大家也习惯把vintage中的成熟期叫做表现期，因此出现一定的混淆。但意思是都是未来的一段时间窗。</p>
+<p><img alt="" src="https://pic4.zhimg.com/80/v2-2b205377904876fbfcecf9955d9082ff_720w.webp" /></p>
+<p>图 6 - 客户逾期状态转化</p>
+<p>滚动率分析的具体操作步骤为：</p>
+<ul>
+<li><strong>step 1.</strong> 确定数据源。一般利用客户还款计划表（repayment schedule）。</li>
+<li><strong>step 2.</strong> 选择观察点，以观察点为截止时间，统计客户在观察期（如过去6个月）的最长逾期期数，按最坏逾期状态将用户分为几个层次，如C、M1、M2、M3、M4+。</li>
+<li><strong>step 3.</strong> 以观察点为起始时间，统计客户在表现期（如未来6个月）的最长逾期期数，按最坏逾期状态将用户分为几个层次，如C、M1、M2、M3、M4+。</li>
+<li><strong>step 4.</strong> 交叉统计每个格子里的客户数，如图6中表1所示。</li>
+<li><strong>step 5.</strong> 统计每个格子里的客户占比，如图6中表2所示。</li>
+<li><strong>step 6.</strong> 为了排除观察点选择时的随机影响，一般会选择多个观察点。重复step1 ～5。</li>
+</ul>
+<p>例如，选择观察点为2018年6月30日，我们取10,000个客户作为研究对象，统计该10,000个客户从观察期到表现期的最大逾期状态的变化情况，如图7所示。</p>
+<p><img alt="" src="../images/Pasted%20image%2020221201145825.png" /></p>
+<p>图 7 - 滚动率分析矩阵</p>
+<p>观察图7，我们可以发现以下规律：</p>
+<ol>
+<li>逾期状态为M0的客户，在未来6个月里，有96%会继续保持正常状态，4%会恶化为M1和M2；</li>
+<li>逾期状态为M1的客户，未来有81%会回到正常状态，即从良率为81%，有7%会恶化，13%会保持M1状态；</li>
+<li>逾期状态为M2的客户，从良率为23%，有39%会恶化为M3和M4+；</li>
+<li>逾期状态为M3的客户，从良率为14.7%，有60.7%会恶化为M4+；</li>
+<li>逾期状态为M4+的客户，从良率仅为4%，有80%会继续保持此状态。</li>
+</ol>
+<p>因此，我们认为历史逾期状态为M4+的客户已经坏透了，几乎不会从良。为了让风控模型有更好的区分能力，需要将客户好坏界限尽可能清晰，可以定义：</p>
+<blockquote>
+<p>坏用户（bad）= 逾期状态为M4+（逾期超过90天）</p>
+</blockquote>
+<h2 id="part-4-y"><strong>Part 4. 如何确定目标变量Y</strong><a class="headerlink" href="#part-4-y" title="Permanent link">&para;</a></h2>
+<p>在风控建模中，由于是有监督学习，我们非常关心如何定义合适的目标变量Y？这就需要结合滚动率分析和Vintage分析，两者的分工在于：</p>
+<ul>
+<li>滚动率分析用于定义客户的**好坏程度**。</li>
+<li>Vintage分析用于确定合适的**表现期**。</li>
+</ul>
+<p>定义目标变量Y的具体操作步骤为：</p>
+<ul>
+<li><strong>step 1.</strong> 利用滚动率分析定义坏客户，例如上文案例中定义：<strong>M4+为坏客户</strong>。</li>
+<li><strong>step 2.</strong> 以M4+作为资产质量指标，统计Vintage数据表，绘制Vintage曲线。目的是**分析账户成熟期**，例如上文案例确定：<strong>账户成熟期是9个月。</strong></li>
+</ul>
+<p>你可能还是会比较疑惑，为什么还需要通过Vintage分析来确定表现期？</p>
+<p>这是因为：虽然滚动率分析确定了M4+作为坏的程度，但是对于12期的产品，有些账户是在前4期MOB（也就是MOB1 ~ MOB4，经过4个表现期）就达到M4+，有些是在后几期才达到M4+。</p>
+<p>对于这个Vintage里所有的账户，我们的目的是抓住尽可能多的坏客户。</p>
+<p>现在进一步补充Vintage曲线的绘制过程：如图8所示，对于这10,000个账户，以MOB1为起点，把前N个MOB作为一个窗口，滑窗统计坏客户率，得到图5-表1中的Vintage数据，并绘制Vintage曲线。我们可以发现：经过9期，我们几乎能够抓住所有的坏客户。</p>
+<p><img alt="" src="https://pic4.zhimg.com/80/v2-8c0014d8126afefda8100c9e324ecd77_720w.webp" /></p>
+<p>图 8 - 不同客户的逾期状态(红=逾期，绿=正常)</p>
+<p>因此，我们将两者结合起来，定义：</p>
+<ul>
+<li>Bad = 账户经过9期表现期后，逾期状态为M4+（逾期超过90天）。此时 Y=1 。</li>
+<li>Good = 经过9期表现期，但未达到M4+逾期状态。此时 Y=0 。</li>
+<li>Intermediate = 未进入9期表现期，账户还未成熟，无法定义好坏，也就是不定样本。</li>
+</ul>
+<h2 id="part-5-flow-rate-analysis"><strong>Part 5. Flow Rate Analysis</strong><a class="headerlink" href="#part-5-flow-rate-analysis" title="Permanent link">&para;</a></h2>
+<p><strong>迁移率分析法</strong>（Flow Rate）也叫做**净流量滚动比例法**（Net Flow Rate），能形象展示客户贷款账户在整个生命周期中的变化轨迹，也是**预测未来坏账损失**的最常用的方法。</p>
+<p>其**核心假设**为：处于某一逾期状态（如M2）的账户，一个月后，要么从良为M0账户，要么恶化为更坏的下一个逾期状态（如M3）。</p>
+<blockquote>
+<p>迁移率 = 前一期逾期金额到下一期逾期金额的转化率</p>
+</blockquote>
+<p>一般缩写为M0-M1、M4-M5等形式，例如：</p>
+<ul>
+<li>M0-M1 = 当月进入M1的贷款余额 / 上月末M0的贷款余额</li>
+<li>M2-M3 = 当月进入M3的贷款余额 / 上月末M2的贷款余额</li>
+</ul>
+<p>迁移率分析的具体操作步骤为：</p>
+<ul>
+<li><strong>step 1.</strong> 定义逾期状态，如前文所述的M0、M1、M2等。</li>
+<li><strong>step 2.</strong> 计算各逾期状态之间的迁移率，如M0-M1、M2-M3等。</li>
+<li><strong>step 3.</strong> 计算不同月份（也可称为Vintage）的平均迁移率。目的是对本平台在不同时期的资产的迁移率有整体的认知。</li>
+<li><strong>step 4.</strong> 根据平均迁移率和不良资产回收率，计算净坏账损失率。</li>
+</ul>
+<p>接下来，我们以数值案例（非真实业务数据）展示上述过程。</p>
+<p><img alt="" src="https://pic4.zhimg.com/80/v2-b5b4256a397202940da4bcef790aec87_720w.webp" /></p>
+<p>图 9 - 迁移率分析</p>
+<p>图9-表2中，2月份的逾期M1资产只能从1月份的正常M0资产滚动而来，因此从逾期M0资产向M1的转化率为 2373371007843=23.55% 。</p>
+<p>以此类推，我们可以计算所有月份的资产恶化率。黄色部分为不良资产的恶化迁移路径，其计算口径为：</p>
+<ul>
+<li>截止1月末，正常M0资产为 1007844 元，这是起点。</li>
+<li>截止2月末，1月末的正常M0资产中有 2373371007843=23.55% 恶化为逾期M1资产。</li>
+<li>截止3月末，2月末的逾期M1资产中有 55362237338=23.33% 恶化为逾期M2资产。</li>
+<li>截止4月末，3月末的逾期M2资产中有 2514455362=45.42% 恶化为逾期M3资产。</li>
+<li>截止5月末，4月末的逾期M4资产中有 20965525144=83.38% 恶化为逾期M5资产。此时已过催收黄金期（90天以内）。</li>
+<li>截止6月末，5月末的逾期M5资产中有 1035020965=49.37% 恶化为逾期M6资产。这可能采用了委外催收、司法手段等催收策略，效果显著。</li>
+<li>截止7月末，6月末的逾期M5资产中有 855910350=82.70% 恶化为逾期M7资产。此时将视为不良资产，打包转卖给第三方公司，这样就能回收部分不良资产，减少损失。</li>
+</ul>
+<p>通过迁移率，我们可以清晰观察到每个Vintage的资产在各逾期状态的演变规律。</p>
+<p>图9-表2中，我们从横向比较每个月的迁移率，发现不完全一样。这是因为随着时间推移、外在宏观经济环境、内部政策等变化而产生一定的波动。我们可以利用这些数据：</p>
+<ol>
+<li>观察迁移率的发展轨迹，监控坏账的发展倾向和催收效果。</li>
+<li>通过对多个月份的迁移率计算平均值，从而使迁移率更加稳定。</li>
+</ol>
+<h2 id="part-6"><strong>Part 6. 坏账准备金的计算</strong><a class="headerlink" href="#part-6" title="Permanent link">&para;</a></h2>
+<p>呆帐风险是信贷机构必须面对的风险，主要来源于信用风险和欺诈风险等。为了应对未来呆帐的可能，信贷机构一般都会设定一个储备资金，这就是**坏账准备金（Bad Debt Reserve）。**那么我们该如何计算坏账准备金？</p>
+<p>一般做法是，把未清偿贷款余额乘以一定的**准备金比例（Reserve Ratio）**所得。可以理解，资产逾期等级越高（越差），准备金比例也应该越高，因为恶化为呆帐的可能性也更高。如图10所示，正常M0资产恶化为呆帐的可能性最低，因此我们预留的准备金比例也就最少。</p>
+<p>我们总结下计算坏账准备金的步骤为：</p>
+<ul>
+<li><strong>step 1.</strong> 统计未清偿贷款金额的分布，也就是M0~M6状态分别对应的资产余额。</li>
+<li><strong>step 2.</strong> 为每个逾期状态的资产分配一个准备金比例。</li>
+<li><strong>step 3.</strong> 每个子项目的准备金金额 = 未清偿贷款余额 x 准备金比例。</li>
+<li><strong>step 4.</strong> 每个子项目的准备金金额相加，得到最终的准备金。</li>
+</ul>
+<p><img alt="" src="https://pic3.zhimg.com/80/v2-7f7c474479a20271db484361905e4d06_720w.webp" /></p>
+<p>图 10 - 坏账准备金计算示例</p>
+<p>你或许会问，这里最关键的准备金比例是如何给出的？</p>
+<p>由于坏账准备金是用来覆盖预期的未来呆帐损失的，<strong>准备金比例必须等于处于各个逾期状态的资产未来演变为呆帐的比例</strong>。</p>
+<p>回到迁移率分析中，我们发现从正常M0资产迁移至逾期M7资产（呆帐）需经过7次迁移，如图11所示。那么，我们只要把各个状态之间的转化率相乘，不就得到准备金比例了？</p>
+<p><img alt="" src="https://pic3.zhimg.com/80/v2-2bc3e7254690eb773faa4bc66ef5ea6e_720w.webp" /></p>
+<p>图 11 - 各逾期状态的迁移率和毛坏账率计算</p>
+<p>因此，我们定义**正常M0资产对应的毛坏账损失率，<strong>也就是迁移到呆帐的转化率为</strong>：**</p>
+<blockquote>
+<p>毛坏账损失率 = (M0−M1)×(M1−M2)×...×(M6−M7)</p>
+</blockquote>
+<p>在本案例中，正常M0资产对应的毛坏账损失率为：</p>
+<p>(1)16.1%×29.28%×42.27%×80.1%×53.6%×80.32%×88.03%=0.60%</p>
+<p>在实际中，信贷机构会将不良资产打包转卖给第三方公司，这样就能回收部分不良资产，减少损失。因此，我们定义净坏账损失率为：</p>
+<blockquote>
+<p>净坏账损失率 = 毛坏账损失率 - 不良资产外卖回收率</p>
+</blockquote>
+<p>由于M7不良资产的平均回收率为 10.79% ，则可计算**净坏账损失率**为：</p>
+<p>(2)0.60%×(1−10.79%)=0.54%</p>
+<p>同理，我们可以计算正常资产到不同逾期状态资产的毛损失率和净损失率如下：</p>
+<p><img alt="" src="https://pic4.zhimg.com/80/v2-35d0ebb91b81844a08674e690b317477_720w.webp" /></p>
+<p>图 12 - 毛损失率和净损失率</p>
+<p>根据图12所示的损失率表，我们定义：</p>
+<ul>
+<li>当月应计拨备额 = SUM(净坏账损失率 * 月末应收账款余额)</li>
+<li>拨备率 = 当月应计拨备额 / 总资产金额</li>
+</ul>
+<p>其中，拨备率是用来预防不良资产的发生而准备的金额的比例。拨备率应越低越好。拨备率越高说明风险越大，损失越大，利润越小。</p>
+<p><img alt="" src="https://pic4.zhimg.com/80/v2-5cbf67b46a2bd9cfc0c10175b7aec153_720w.webp" /></p>
+<p>图 13 - 2018年7月的资产预计期望损失计算</p>
+<p>在本案例中，当月应计拨备额为65421元，如图13所示。拨备率为：654212625091=2.49%</p>
+<h2 id="part-7"><strong>Part 7. 总结</strong><a class="headerlink" href="#part-7" title="Permanent link">&para;</a></h2>
+<p>本文所整理的主要知识点包括：</p>
+<ol>
+<li>Vintage、滚动率、迁移率的概念和区别。</li>
+<li>如何根据数据分析来确定风控建模中的好坏定义。</li>
+<li>拨备率的概念，以及如何根据迁移率来计算拨备率。</li>
+</ol>
+<h2 id="_1">参考资料<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>信贷风控中Vintage、滚动率、迁移率的理解：<a href="https://zhuanlan.zhihu.com/p/81027037">https://zhuanlan.zhihu.com/p/81027037</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            回到页面顶部
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="页脚" >
+      
+        
+        <a href="../%E8%B4%B7%E6%AC%BE%E6%8B%A8%E5%A4%87%E7%8E%87%E5%92%8C%E6%8B%A8%E5%A4%87%E8%A6%86%E7%9B%96%E7%8E%87/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 贷款拨备率和拨备覆盖率" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              贷款拨备率和拨备覆盖率
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../%E6%96%AD%E7%9B%B4%E8%BF%9E/" class="md-footer__link md-footer__link--next" aria-label="下一页: 断直联" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              断直联
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2016 - 2022 Zhimin Bai
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.tooltips", "navigation.indexes", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+    
+  </body>
+</html>
